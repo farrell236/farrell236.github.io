@@ -326,7 +326,7 @@ test('Musings replaces Writing in user-facing navigation and headings', async ()
   assert.doesNotMatch(`${index}${archive}${article}`, />Writing<\/a>|<h1>Writing<\/h1>|>All writing<\/a>/);
 });
 
-test('project musings can link directly to their hosted sites', async () => {
+test('project musings can link directly to external destinations', async () => {
   const index = await readFile(resolve(output, 'index.html'), 'utf8');
   const archive = await readFile(resolve(output, 'writing/index.html'), 'utf8');
   const homepageProjects = [
@@ -335,7 +335,7 @@ test('project musings can link directly to their hosted sites', async () => {
   ];
   const hostedProjects = [
     ...homepageProjects,
-    'https://farrell236.github.io/python-drr/',
+    'https://github.com/farrell236/python-drr',
   ];
   for (const href of hostedProjects) {
     assert.ok(archive.includes(`href="${href}"`), `Musings missing direct link: ${href}`);

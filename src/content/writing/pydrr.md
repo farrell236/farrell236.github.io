@@ -3,7 +3,7 @@ title: "PyDRR: a transparent route from CT volumes to projection images"
 description: "A practical Siddon–Jacobs ray-tracing renderer for studying projection geometry with CPU and CUDA execution paths."
 published: 2026-05-10
 category: Project notes
-externalUrl: https://farrell236.github.io/python-drr/
+externalUrl: https://github.com/farrell236/python-drr
 archived: false
 ---
 
