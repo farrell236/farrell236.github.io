@@ -1,0 +1,20 @@
+@inproceedings{DBLP:conf/eccv/SchluterTHK22,
+  author    = {Hannah M. Schl{\"{u}}ter and
+               Jeremy Tan and
+               Benjamin Hou and
+               Bernhard Kainz},
+  title     = {Natural Synthetic Anomalies for Self-supervised Anomaly Detection
+               and Localization},
+  booktitle = {{ECCV} {(31)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {13691},
+  pages     = {474--489},
+  publisher = {Springer},
+  year      = {2022},
+  doi = {10.1007/978-3-031-19821-2\_27},
+  url = {https://doi.org/10.1007/978-3-031-19821-2\_27},
+  eprint = {2109.15222},
+  archiveprefix = {arXiv},
+  code = {https://github.com/hmsch/natural-synthetic-anomalies},
+  abstract = {We introduce a simple and intuitive self-supervision task, Natural Synthetic Anomalies (NSA), for training an end-to-end model for anomaly detection and localization using only normal training data. NSA integrates Poisson image editing to seamlessly blend scaled patches of various sizes from separate images. This creates a wide range of synthetic anomalies which are more similar to natural sub-image irregularities than previous data-augmentation strategies for self-supervised anomaly detection. We evaluate the proposed method using natural and medical images. Our experiments with the MVTec AD dataset show that a model trained to localize NSA anomalies generalizes well to detecting real-world a priori unknown types of manufacturing defects. Our method achieves an overall detection AUROC of 97.2 outperforming all previous methods that learn without the use of additional datasets. Code available at https://github.com/hmsch/natural-synthetic-anomalies.},
+}

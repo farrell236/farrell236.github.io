@@ -1,20 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ResearchCard from '../components/ResearchCard.astro';
-import Publication from '../components/Publication.astro';
+import ResearchPaperCard from '../components/ResearchPaperCard.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import Icon from '../components/Icon.astro';
 import { homePage } from '../data/pages';
-import { getPublications, getResearchProjects, getWriting } from '../lib/collections';
+import { getResearchPapers, getWriting } from '../lib/collections';
 import { url } from '../lib/urls';
 
-const projects = await getResearchProjects(true);
-const publications = await getPublications(true);
+const researchPapers = await getResearchPapers(true);
 const writing = await getWriting(homePage.writingLimit);
 ---
 <Layout>
   <section class="intro" aria-labelledby="intro-title">
-    <h1 id="intro-title">{homePage.title}</h1>
+    <h1 id="intro-title">
+      <span class="intro-title-line">{homePage.title[0]}</span>
+      <span class="intro-title-line">{homePage.title[1]}</span>
+    </h1>
     <p class="lede">{homePage.lede}</p>
     <div class="intro-actions">
       <a class="button button-primary" href={url(homePage.primaryAction.href)}>
@@ -33,7 +34,13 @@ const writing = await getWriting(homePage.writingLimit);
       href="/research/"
     />
     <div class="research-list">
-      {projects.map((project, index) => <ResearchCard project={project} featured={index === 0} />)}
+      {researchPapers.map(({ publication, entry }) => (
+        <ResearchPaperCard
+          publication={publication}
+          summary={entry.summary}
+          image={entry.image}
+        />
+      ))}
     </div>
   </section>
   <section class="section" aria-labelledby="publications-title">
@@ -44,7 +51,21 @@ const writing = await getWriting(homePage.writingLimit);
       href="/publications/"
     />
     <div class="publication-list">
-      {publications.map(publication => <Publication publication={publication} />)}
+      {homePage.publications.map(publication => (
+        <article class="publication">
+          <span class="publication-year">{publication.year}</span>
+          <div class="publication-content">
+            <h3>{publication.title}</h3>
+            <p class="authors">{publication.authors}</p>
+            <p class="venue">{publication.venue}</p>
+            {publication.href && (
+              <div class="publication-actions">
+                <a href={url(publication.href)} aria-label={`View paper: ${publication.title}`}>Paper</a>
+              </div>
+            )}
+          </div>
+        </article>
+      ))}
     </div>
   </section>
   <section class="section" aria-labelledby="writing-title">

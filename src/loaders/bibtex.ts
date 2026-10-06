@@ -13,6 +13,7 @@ interface BibtexLoaderOptions {
 function plainText(value: string) {
   return value
     .replace(/\x0e\/?[a-z]+\x0f/gi, '')
+    .replace(/\\([%&_#])/g, '$1')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -32,10 +33,11 @@ function requiredField(entry: Entry, name: string, filename: string) {
 
 function creatorName(creator: Creator) {
   if (creator.name) return plainText(creator.name);
-  return [creator.firstName, creator.prefix, creator.lastName, creator.suffix]
+  const name = [creator.firstName, creator.prefix, creator.lastName, creator.suffix]
     .filter(Boolean)
     .map(part => plainText(part as string))
     .join(' ');
+  return /^others$/i.test(name) ? 'et al.' : name;
 }
 
 function authors(entry: Entry, filename: string) {
@@ -63,7 +65,7 @@ function venue(entry: Entry, filename: string) {
   }
 
   const volume = field(entry, 'volume');
-  const number = field(entry, 'number');
+  const number = field(entry, 'number') || field(entry, 'issue');
   const pages = field(entry, 'pages');
   const issue = volume ? `${volume}${number ? `(${number})` : ''}` : number ? `(${number})` : '';
   const locator = issue && pages ? `${issue}:${pages}` : issue || pages;
@@ -73,13 +75,24 @@ function venue(entry: Entry, filename: string) {
 
 function publicationLinks(entry: Entry, filename: string) {
   const links: Array<{ label: string; href: string }> = [];
-  const directUrl = field(entry, 'url');
-  const doi = field(entry, 'doi')?.replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, '');
+  const validValue = (value?: string) => (
+    value && !/^(?:tbd|n\/?a|none|unknown)$/i.test(value) ? value : undefined
+  );
+  const directUrl = validValue(field(entry, 'url'));
+  const doiValue = validValue(field(entry, 'doi'))
+    ?.replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, '');
+  const doi = doiValue && /^10\.\d{4,9}\//.test(doiValue) ? doiValue : undefined;
   const eprint = field(entry, 'eprint');
   const archive = field(entry, 'archiveprefix')?.toLowerCase();
-  const paper = directUrl
-    || (doi ? `https://doi.org/${doi}` : undefined)
-    || (eprint && archive === 'arxiv' ? `https://arxiv.org/abs/${eprint}` : undefined);
+  const isArxiv = (value?: string) => Boolean(value && /(?:arxiv\.org|10\.48550\/arxiv)/i.test(value));
+  const publisherDoi = doi && !isArxiv(doi) ? `https://doi.org/${doi}` : undefined;
+  const publisherUrl = directUrl && !isArxiv(directUrl) ? directUrl : undefined;
+  const arxivUrl = eprint && archive === 'arxiv' ? `https://arxiv.org/abs/${eprint}` : undefined;
+  const paper = publisherDoi
+    || publisherUrl
+    || arxivUrl
+    || directUrl
+    || (doi ? `https://doi.org/${doi}` : undefined);
 
   if (paper) links.push({ label: 'Paper', href: paper });
   const code = field(entry, 'code');
@@ -149,7 +162,7 @@ export function bibtexLoader({ base }: BibtexLoaderOptions): Loader {
           year,
           order,
           selected: /^(?:true|yes|1)$/i.test(field(entry, 'selected') || ''),
-          summary: field(entry, 'summary') || field(entry, 'abstract'),
+          abstract: field(entry, 'abstract') || field(entry, 'summary'),
           links: publicationLinks(entry, filename),
         };
         const data = await parseData({ id, data: rawData, filePath });

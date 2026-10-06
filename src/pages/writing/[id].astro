@@ -18,8 +18,8 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 <Layout title={post.data.title} description={post.data.description} kind="article" published={post.data.published}>
-  <a class="text-link back-link" href={url('/writing/')}><Icon name="arrow-left" />All writing</a>
+  <a class="text-link back-link" href={url('/writing/')}><Icon name="arrow-left" />All musings</a>
   <div class="page-heading"><h1>{post.data.title}</h1><p>{post.data.description}</p><p class="page-meta">{post.data.category} · <time datetime={post.data.published.toISOString()}>{formatDate(post.data.published)}</time></p></div>
-  {post.data.archived && <p class="archive-notice">Archived writing. Software versions and setup instructions may no longer be current.</p>}
-  <article class="panel prose"><Content /></article>
+  {post.data.archived && <p class="archive-notice">Archived musing. Software versions and setup instructions may no longer be current.</p>}
+  <article class="panel prose musing-prose"><Content /></article>
 </Layout>

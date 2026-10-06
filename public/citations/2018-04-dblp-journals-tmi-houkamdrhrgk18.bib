@@ -1,0 +1,22 @@
+@article{DBLP:journals/tmi/HouKAMDRHRGK18,
+  author    = {Benjamin Hou and
+               Bishesh Khanal and
+               Amir Alansary and
+               Steven G. McDonagh and
+               Alice Davidson and
+               Mary A. Rutherford and
+               Joseph V. Hajnal and
+               Daniel Rueckert and
+               Ben Glocker and
+               Bernhard Kainz},
+  title     = {3-D Reconstruction in Canonical Co-Ordinate Space From Arbitrarily
+               Oriented 2-D Images},
+  journal   = {{IEEE} Trans. Medical Imaging},
+  volume    = {37},
+  number    = {8},
+  pages     = {1737--1750},
+  year      = {2018},
+  doi = {10.1109/tmi.2018.2798801},
+  url = {https://doi.org/10.1109/tmi.2018.2798801},
+  abstract = {Limited capture range, and the requirement to provide high quality initialization for optimization-based 2-D/3-D image registration methods, can significantly degrade the performance of 3-D image reconstruction and motion compensation pipelines. Challenging clinical imaging scenarios, which contain significant subject motion, such as fetal in-utero imaging, complicate the 3-D image and volume reconstruction process. In this paper, we present a learning-based image registration method capable of predicting 3-D rigid transformations of arbitrarily oriented 2-D image slices, with respect to a learned canonical atlas co-ordinate system. Only image slice intensity information is used to perform registration and canonical alignment, no spatial transform initialization is required. To find image transformations, we utilize a convolutional neural network architecture to learn the regression function capable of mapping 2-D image slices to a 3-D canonical atlas space. We extensively evaluate the effectiveness of our approach quantitatively on simulated magnetic resonance imaging (MRI), fetal brain imagery with synthetic motion and further demonstrate qualitative results on real fetal MRI data where our method is integrated into a full reconstruction and motion compensation pipeline. Our learning based registration achieves an average spatial prediction error of 7 mm on simulated data and produces qualitatively improved reconstructions for heavily moving fetuses with gestational ages of approximately 20 weeks. Our model provides a general and computationally efficient solution to the 2-D/3-D registration initialization problem and is suitable for real-time scenarios.},
+}

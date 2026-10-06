@@ -1,0 +1,24 @@
+@inproceedings{DBLP:conf/miccai/HouAMDRHRGK17,
+  author    = {Benjamin Hou and
+               Amir Alansary and
+               Steven G. McDonagh and
+               Alice Davidson and
+               Mary A. Rutherford and
+               Joseph V. Hajnal and
+               Daniel Rueckert and
+               Ben Glocker and
+               Bernhard Kainz},
+  title     = {Predicting Slice-to-Volume Transformation in Presence of Arbitrary
+               Subject Motion},
+  booktitle = {{MICCAI} {(2)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {10434},
+  pages     = {296--304},
+  publisher = {Springer},
+  year      = {2017},
+  doi = {10.1007/978-3-319-66185-8\_34},
+  url = {https://doi.org/10.1007/978-3-319-66185-8\_34},
+  eprint = {1702.08891},
+  archiveprefix = {arXiv},
+  abstract = {This paper aims to solve a fundamental problem in intensity-based 2D/3D registration, which concerns the limited capture range and need for very good initialization of state-of-the-art image registration methods. We propose a regression approach that learns to predict rotation and translations of arbitrary 2D image slices from 3D volumes, with respect to a learned canonical atlas co-ordinate system. To this end, we utilize Convolutional Neural Networks (CNNs) to learn the highly complex regression function that maps 2D image slices into their correct position and orientation in 3D space. Our approach is attractive in challenging imaging scenarios, where significant subject motion complicates reconstruction performance of 3D volumes from 2D slice data. We extensively evaluate the effectiveness of our approach quantitatively on simulated MRI brain data with extreme random motion. We further demonstrate qualitative results on fetal MRI where our method is integrated into a full reconstruction and motion compensation pipeline. With our CNN regression approach we obtain an average prediction error of 7mm on simulated data, and convincing reconstruction quality of images of very young fetuses where previous methods fail. We further discuss applications to Computed Tomography and X-ray projections. Our approach is a general solution to the 2D/3D initialization problem. It is computationally efficient, with prediction times per slice of a few milliseconds, making it suitable for real-time scenarios.},
+}

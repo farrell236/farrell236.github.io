@@ -1,8 +1,8 @@
 ---
-type ArtVariant = 'geometry' | 'retina' | 'language';
+type ArtVariant = 'geometry' | 'retina' | 'language' | 'quantitative';
 interface Props { variant?: string; }
 const requestedVariant = Astro.props.variant;
-const supportedVariants: ArtVariant[] = ['geometry', 'retina', 'language'];
+const supportedVariants: ArtVariant[] = ['geometry', 'retina', 'language', 'quantitative'];
 const variant: ArtVariant = supportedVariants.includes(requestedVariant as ArtVariant)
   ? requestedVariant as ArtVariant
   : 'geometry';
@@ -45,6 +45,23 @@ const rings = [26, 38, 50, 62];
       <rect class="report-frame" x="234" y="83" width="123" height="135" rx="13" />
       <path class="report-heading" d="M254 106h61" />
       <path class="report-lines" d="M254 130h80M254 146h70M254 162h77M254 178h53M254 194h64" />
+    </svg>
+  )}
+  {variant === 'quantitative' && (
+    <svg viewBox="0 0 400 300" fill="none">
+      <rect class="quant-scan-frame" x="45" y="55" width="185" height="190" rx="14" />
+      <path class="quant-body" d="M138 78c-43 0-71 31-71 73 0 45 28 73 71 73s71-28 71-73c0-42-28-73-71-73z" />
+      <path class="quant-region" d="M108 116c22-19 54-16 68 8 13 23 1 56-25 65-25 9-55-8-58-34-2-15 3-29 15-39z" />
+      <path class="quant-contour" d="M117 129c15-13 37-10 46 6 9 17 0 38-17 44-18 6-38-5-40-23-2-11 2-20 11-27z" />
+      <path class="quant-measure" d="M86 151h105M138 96v111" />
+      <path class="quant-axis" d="M268 226V88m0 138h92" />
+      <rect class="quant-bar quant-bar-one" x="285" y="164" width="16" height="62" />
+      <rect class="quant-bar quant-bar-two" x="311" y="129" width="16" height="97" />
+      <rect class="quant-bar quant-bar-three" x="337" y="103" width="16" height="123" />
+      <path class="quant-trend" d="m285 151 34-37 27-26" />
+      <circle class="scan-point" cx="285" cy="151" r="4" />
+      <circle class="scan-point" cx="319" cy="114" r="4" />
+      <circle class="scan-point" cx="346" cy="88" r="4" />
     </svg>
   )}
 </div>

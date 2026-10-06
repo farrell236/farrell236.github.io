@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
-  <title>Generic fictional researcher avatar</title>
-  <defs><clipPath id="circle"><circle cx="200" cy="200" r="200"/></clipPath></defs>
+  <title>Benjamin Hou monogram</title>
+  <defs>
+    <linearGradient id="background" x1="50" y1="20" x2="350" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34aadc"/>
+      <stop offset="1" stop-color="#005fc4"/>
+    </linearGradient>
+    <clipPath id="circle"><circle cx="200" cy="200" r="200"/></clipPath>
+  </defs>
   <g clip-path="url(#circle)">
-    <rect width="400" height="400" fill="#e8f3ff"/>
-    <circle cx="200" cy="154" r="65" fill="#34aadc"/>
-    <path d="M73 400v-50c0-78 51-124 127-124s127 46 127 124v50" fill="#007aff"/>
-    <path d="M150 246l50 70 50-70" fill="#ffcc00"/>
+    <rect width="400" height="400" fill="url(#background)"/>
+    <circle cx="314" cy="78" r="72" fill="#fff" opacity=".1"/>
+    <circle cx="76" cy="334" r="108" fill="#fff" opacity=".07"/>
+    <text x="200" y="224" fill="#fff" font-family="Helvetica Neue, Arial, sans-serif" font-size="112" font-weight="300" letter-spacing="-4" text-anchor="middle">BH</text>
   </g>
 </svg>

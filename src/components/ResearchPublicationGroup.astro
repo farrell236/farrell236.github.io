@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Publication from './Publication.astro';
+
+interface Props {
+  id: string;
+  title: string;
+  description: string;
+  publications: CollectionEntry<'publications'>[];
+}
+
+const { id, title, description, publications } = Astro.props;
+---
+{publications.length > 0 && (
+  <section class="research-output" aria-labelledby={id}>
+    <div class="research-output-heading">
+      <h2 id={id}>{title}</h2>
+      <p>{description}</p>
+    </div>
+    <div class="publication-list research-publication-list">
+      {publications.map(publication => <Publication publication={publication} />)}
+    </div>
+  </section>
+)}

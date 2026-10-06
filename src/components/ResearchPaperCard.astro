@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { ResearchImage } from '../data/research';
+import Icon from './Icon.astro';
+import { url } from '../lib/urls';
+
+interface Props {
+  publication: CollectionEntry<'publications'>;
+  summary: string;
+  image: ResearchImage;
+  headingLevel?: 2 | 3;
+}
+
+const {
+  publication,
+  summary,
+  image,
+  headingLevel = 3,
+} = Astro.props;
+const Heading = headingLevel === 2 ? 'h2' : 'h3';
+const venue = publication.data.venue.split(' · ')[0];
+const imageStyle = [
+  `--research-image-scale:${image.scale}`,
+  `--research-image-focus:${image.focus}`,
+  image.clip ? `--research-image-clip:${image.clip}` : '',
+  image.fit ? `--research-image-fit:${image.fit}` : '',
+  image.position ? `--research-image-position:${image.position}` : '',
+].filter(Boolean).join(';');
+---
+<article class="research-card research-paper-card">
+  <figure
+    class="art-link research-card-art"
+    style={imageStyle}
+  >
+    <img
+      class="research-paper-image"
+      src={url(image.src)}
+      alt={image.alt}
+      width="600"
+      height="800"
+      loading="lazy"
+      decoding="async"
+    />
+    <figcaption class="visually-hidden">{image.credit} Source: {image.sourceUrl}</figcaption>
+  </figure>
+  <div class="research-card-copy">
+    <p class="field">{venue} · {publication.data.year}</p>
+    <Heading>{publication.data.title}</Heading>
+    <p class="research-description">{summary}</p>
+    <span class="text-link research-link-disabled" aria-disabled="true">
+      Explore project<Icon />
+    </span>
+  </div>
+</article>

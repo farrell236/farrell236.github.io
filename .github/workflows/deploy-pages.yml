@@ -1,6 +1,8 @@
-name: Deploy GitHub Pages demo
+name: Deploy personal website
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -34,11 +36,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Verify and build demo
+      - name: Verify and build website
         env:
-          SITE_URL: https://${{ github.repository_owner }}.github.io
-          ASTRO_BASE: /${{ github.event.repository.name }}/
-          PUBLIC_IS_PREVIEW: "true"
+          SITE_URL: https://farrell236.github.io
+          ASTRO_BASE: /
+          PUBLIC_IS_PREVIEW: "false"
         run: pnpm verify
 
       - name: Configure GitHub Pages

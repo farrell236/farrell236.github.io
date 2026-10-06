@@ -13,26 +13,26 @@ export type Link = {
 export const contentFormatVersion = 1 as const;
 
 export const site = {
-  name: 'Clearform',
+  name: 'Benjamin Hou',
   language: 'en',
 };
 
 export const profile = {
-  name: 'Alex Example',
-  discipline: 'Computational science & machine learning',
-  introduction: 'Exploring how structure, data and language can support scientific discovery.',
-  email: 'alex@example.org',
-  portrait: '/images/avatar.svg',
-  portraitAlt: 'Generic placeholder avatar for the fictional researcher Alex Example',
-  cv: '/files/sample-cv.pdf',
+  name: 'Benjamin Hou',
+  discipline: 'Medical Image Analysis · Natural Language Processing · Clinical Translation',
+  introduction: 'Research Fellow in Artificial Intelligence for Bioinformatics, Division of Intramural Research, National Library of Medicine, National Institutes of Health.',
+  email: 'farrell236@outlook.com',
+  portrait: '/images/benjamin-hou.jpg',
+  portraitAlt: 'Portrait of Benjamin Hou',
+  cv: '/files/benjamin-hou-cv.pdf',
+  orcid: 'https://orcid.org/0000-0003-3968-1707',
   links: [
-    { label: 'Google Scholar', href: '/about/demo-resources/#scholar' },
-    { label: 'GitHub', href: '/about/demo-resources/#github' },
-    { label: 'LinkedIn', href: '/about/demo-resources/#linkedin' },
-    // Neutral platform homepages: replace with your own profiles when customising.
-    { label: 'Hugging Face', href: 'https://huggingface.co/' },
-    { label: 'Instagram', href: 'https://www.instagram.com/' },
-    { label: 'Twitter / X', href: 'https://x.com/' },
+    { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=_c3RvvQAAAAJ' },
+    { label: 'GitHub', href: 'https://github.com/farrell236' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/farrell236' },
+    { label: 'Hugging Face', href: 'https://huggingface.co/farrell236' },
+    { label: 'Instagram', href: 'https://www.instagram.com/farrell.236' },
+    { label: 'X', href: 'https://x.com/farrell192' },
   ] satisfies Link[],
 };
 
@@ -40,12 +40,12 @@ export const navigation = [
   { label: 'Research', href: '/research/' },
   { label: 'Publications', href: '/publications/' },
   { label: 'Academic', href: '/academic/' },
-  { label: 'Writing', href: '/writing/' },
+  { label: 'Musings', href: '/writing/' },
   { label: 'About', href: '/about/' },
 ] satisfies Link[];
 
 // Leave preview mode on until the finished site is ready for search engines.
 export const isPreview = import.meta.env.PUBLIC_IS_PREVIEW !== 'false';
 
-// Keep true for the public template demo; set false after replacing every example.
-export const demoContent = true;
+// Personalised profile content enables Person structured data on the homepage.
+export const demoContent = false;

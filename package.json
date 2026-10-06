@@ -1,5 +1,5 @@
 {
-  "name": "clearform-academic",
+  "name": "benjamin-hou-academic-website",
   "version": "0.1.0-beta.1",
   "private": true,
   "license": "GPL-3.0-or-later",
@@ -9,7 +9,8 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "astro dev --host 127.0.0.1",
+    "dev": "astro dev",
+    "import:publications": "node scripts/import-publications.mjs",
     "check": "astro check",
     "build": "astro build",
     "preview": "astro preview --host 127.0.0.1",

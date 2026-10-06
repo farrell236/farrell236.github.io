@@ -1,0 +1,13 @@
+@article{bloom2026analysis,
+  title={Analysis of deep learning-based segmentation of lymph nodes on full-dose and reduced-dose body CT},
+  author={Bloom, Lindsey H. and Mathai, Tejas Sudharshan and Liu, Bohan and Khoury, Brandon and Patel, Naiya and Wei, Olivia and Balamuralikrishna, Praveen T. S. and Hou, Benjamin and Solomon, Justin and Pucar, Darko and Samei, Ehsan and Jones, Elizabeth C. and Summers, Ronald M.},
+  journal={Abdominal Radiology},
+  volume={51},
+  number={6},
+  pages={3190--3201},
+  year={2026},
+  publisher={Springer},
+  doi = {10.1007/s00261-025-05253-8},
+  url = {https://doi.org/10.1007/s00261-025-05253-8},
+  abstract = {OBJECTIVES: The performance of fully automated deep learning-based models for the detection and segmentation of lymph nodes (LNs) on full- and simulated reduced-dose CT was validated. METHODS: A total of 15,341 LNs were annotated in 151 patient CTs (age 52 ± 14 years, 87 males) from the public TCIA NIH CT Lymph Nodes dataset. Two 3D nnU-Net models were trained on 90 CT scans: (1) only full dose CTs (NoAugmentation), and (2) both full- and reduced-dose CTs (Augmentation). Dose reduction from 75\% to 5\% of the full-dose was simulated using a noise-addition tool. Performance was validated on the remaining 61 CTs and an external TCIA Mediastinal LNQ dataset (120 CTs, 64 females). RESULTS: On 61 full-dose CTs, the Augmentation model detected all LNs with 67.3\% precision and 84.6\% sensitivity. For all LNs and large nodes (short axis diameter ≥ 8 mm), Dice Similarity Coefficient (DSC) was 0.83 ± 0.07 and 0.80 ± 0.14, while Hausdorff Distance (HD) error was 1.47 ± 0.91 mm and 3.2 ± 2.28 mm, respectively. Performance decreased with dose reduction (p < 0.01), reaching 73.8\% detection sensitivity and 0.75 DSC at 5\% dose. Statistically significant differences between Augmentation vs. NoAugmentation models were seen for all nodes (p < 0.001) and small nodes (p < 0.05) at 10\% and 5\% doses. On the external LNQ dataset, the Augmentation model attained a DSC of 0.76 ± 0.12 and HD of 4.7 ± 3.23 (p < 0.01) for all LNs. CONCLUSION: Degraded image quality impacted nodal delineation on reduced-dose CT. Performance improved when a model trained on both full- and reduced-dose CTs was used.},
+}

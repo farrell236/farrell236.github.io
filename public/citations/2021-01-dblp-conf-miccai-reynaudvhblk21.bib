@@ -1,0 +1,21 @@
+@inproceedings{DBLP:conf/miccai/ReynaudVHBLK21,
+  author    = {Hadrien Reynaud and
+               Athanasios Vlontzos and
+               Benjamin Hou and
+               Arian Beqiri and
+               Paul Leeson and
+               Bernhard Kainz},
+  title     = {Ultrasound Video Transformers for Cardiac Ejection Fraction Estimation},
+  booktitle = {{MICCAI} {(6)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12906},
+  pages     = {495--505},
+  publisher = {Springer},
+  year      = {2021},
+  doi = {10.1007/978-3-030-87231-1\_48},
+  url = {https://doi.org/10.1007/978-3-030-87231-1\_48},
+  eprint = {2107.00977},
+  archiveprefix = {arXiv},
+  abstract = {Cardiac ultrasound imaging is used to diagnose various heart diseases. Common analysis pipelines involve manual processing of the video frames by expert clinicians. This suffers from intra- and inter-observer variability. We propose a novel approach to ultrasound video analysis using a transformer architecture based on a Residual Auto-Encoder Network and a BERT model adapted for token classification. This enables videos of any length to be processed. We apply our model to the task of End-Systolic (ES) and End-Diastolic (ED) frame detection and the automated computation of the left ventricular ejection fraction. We achieve an average frame distance of 3.36 frames for the ES and 7.17 frames for the ED on videos of arbitrary length. Our end-to-end learnable approach can estimate the ejection fraction with a MAE of 5.95 and $R^2$ of 0.52 in 0.15s per video, showing that segmentation is not the only way to predict ejection fraction. Code and models are available at https://github.com/HReynaud/UVT.},
+  code = {https://github.com/HReynaud/UVT},
+}

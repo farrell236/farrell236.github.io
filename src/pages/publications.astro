@@ -14,9 +14,14 @@ const page = sectionPages.publications;
 ---
 <Layout title={page.title} description={page.metaDescription}>
   <PageHeading title={page.title} description={page.description}>
-    <a class="text-link" href={url(profile.links[0].href)}>
-      {page.profileLinkLabel}<Icon name="arrow-up-right" />
-    </a>
+    <div class="resource-links">
+      <a class="text-link" href={url(profile.links[0].href)}>
+        {page.profileLinkLabel}<Icon name="arrow-up-right" />
+      </a>
+      <a class="text-link" href={url(profile.orcid)}>
+        ORCID<Icon name="arrow-up-right" />
+      </a>
+    </div>
   </PageHeading>
   {years.map(year => (
     <section aria-labelledby={`year-${year}`}>

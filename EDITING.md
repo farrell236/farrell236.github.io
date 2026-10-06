@@ -26,7 +26,7 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Open <http://localhost:4321>. Keep the development server running while you
+Open <http://127.0.0.1:4326>. Keep the development server running while you
 edit; Astro refreshes the page after saved changes.
 
 Before keeping or publishing an edit, run:
@@ -51,30 +51,43 @@ links and assets, and runs the template safeguards.
 7. Run `pnpm verify` again. Search the finished source for `Example`, `Sample`,
    `Placeholder` and `fictional` before publishing.
 
-## Add a research project
+## Add a paper to the Research overview
 
-Copy `src/content/templates/research.md` to
-`src/content/research/your-project-slug.md`. The filename becomes the URL:
-`/research/your-project-slug/`.
+Add the paper to `public/citations/` as described below, then add its citation
+key to `src/data/research.ts`. Keep that file in reverse chronological order.
 
-Edit every frontmatter field:
+- `summary` is the short explanation shown below the publication title.
+- `image` supplies a local paper figure, concise alternative text, figure credit
+  and the original paper URL. Keep research images in
+  `public/images/research/` and record third-party terms in `ATTRIBUTION.md`.
+- `theme` assigns the paper to one of the groups declared at the top of the
+  same file. Papers are displayed newest-first within each theme.
+- `selected: true` also places the entry in Selected research on the homepage.
+- The cited paper must list the profile owner as its first author. Missing keys
+  and non-first-author entries fail the build rather than silently drifting.
 
-- `title` is the detail-page heading; `shortTitle` is used on cards.
-- `description` is used on cards and in page metadata.
-- `order` controls the research-list order. Use a unique whole number.
-- `selected: true` includes the project on the homepage.
-- `illustration` is an optional theme hint. The bundled choices are `geometry`,
-  `retina` and `language`; missing or unknown values use neutral artwork.
-- `links` can contain local paths or complete `https://` URLs; use `links: []`
-  if there are no resources yet.
-
-Write the project body below the second `---` using Markdown headings and
-paragraphs. Then run `pnpm verify`.
+The grey Explore project label is intentionally disabled while research detail
+pages are being designed. Existing Markdown detail pages in
+`src/content/research/` remain available to develop later, but neither the
+overview card nor its artwork links to them.
 
 ## Add a publication
 
-Copy `src/content/templates/publication.bib` to a filename such as
-`public/citations/2026-01-short-paper-title.bib`. The loader watches that folder
+To import a complete bibliography, replace `public/files/references.bib` and run:
+
+```sh
+pnpm import:publications
+```
+
+This validates the library and regenerates one ordered citation file per entry.
+Entries are ordered by their position within each year in the source file. The
+complete library remains downloadable from the Publications page.
+
+To add a single publication manually, copy
+`src/content/templates/publication.bib` to a filename such as
+`public/citations/2026-01-short-paper-title.bib`.
+
+The loader watches that folder
 while `pnpm dev` is running and rebuilds the publication collection when a file
 is added, changed or removed.
 
@@ -91,10 +104,11 @@ Use standard BibTeX fields wherever possible:
 - `author`, `title` and `year` are required. Separate authors with `and`.
 - Add one of `journal`, `booktitle`, `publisher`, `institution`, `school` or
   `howpublished`; volume, number and pages are formatted automatically.
-- `url` creates the Paper action. If it is absent, `doi` or an arXiv `eprint`
-  is used when available.
+- The Paper action prefers a publisher DOI, then an official non-arXiv `url`,
+  then an arXiv `eprint` when available.
 - Optional `code` and `slides` fields create matching actions.
-- Optional `summary` or standard `abstract` text creates the expandable Summary.
+- A standard `abstract` field creates the expandable Abstract. The legacy
+  `summary` field is still accepted by the loader for older content.
 - Optional `selected = {true}` includes the paper on the homepage.
 
 The BibTeX download action is added automatically because the source file is

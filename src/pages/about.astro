@@ -9,25 +9,44 @@ import { url } from '../lib/urls';
 <Layout title="About" description={aboutPage.metaDescription}>
   <PageHeading
     title={aboutPage.title}
-    description={`I am ${profile.name}, ${aboutPage.introduction}`}
+    description={aboutPage.introduction}
   />
-  <article class="panel prose">
-    {aboutPage.sections.map(section => (
-      <section>
-        <h2>{section.title}</h2>
-        {section.paragraphs.map(paragraph => <p>{paragraph}</p>)}
-      </section>
-    ))}
-    <a class="text-link" href={url(profile.cv)} download>
-      {aboutPage.cvLabel}<Icon name="download" />
-    </a>
-  </article>
+
+  <section class="section" aria-labelledby="biography-title">
+    <div class="section-heading">
+      <h2 id="biography-title">Biography</h2>
+    </div>
+    <article class="panel prose about-biography">
+      {aboutPage.biography.map(paragraph => <p>{paragraph}</p>)}
+      <a class="text-link" href={url(profile.cv)} download>
+        {aboutPage.cvLabel}<Icon name="download" />
+      </a>
+    </article>
+  </section>
+
+  <section class="section" aria-labelledby="research-interests-title">
+    <div class="section-heading">
+      <h2 id="research-interests-title">Research interests</h2>
+    </div>
+    <div class="summary-list about-research">
+      {aboutPage.researchAreas.map(area => (
+        <article class="summary-row">
+          <p class="summary-label">{area.label}</p>
+          <div class="summary-content">
+            <h3>{area.title}</h3>
+            <p>{area.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="panel contact-panel" aria-labelledby="contact">
     <h2 id="contact">{aboutPage.contactTitle}</h2>
     <p>{aboutPage.contactText}</p>
     <div class="resource-links">
       <a class="button button-primary" href={`mailto:${profile.email}`}>
-        <Icon name="mail" />Email {profile.name}
+        <Icon name="mail" />Email
       </a>
       {profile.links.map(link => (
         <a class="button button-secondary" href={url(link.href)}>

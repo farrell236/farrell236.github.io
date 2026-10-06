@@ -3,8 +3,9 @@ import { render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import ResearchArt from '../../components/ResearchArt.astro';
+import ResearchPublicationGroup from '../../components/ResearchPublicationGroup.astro';
 import Icon from '../../components/Icon.astro';
-import { getResearchProjects } from '../../lib/collections';
+import { getPublications, getResearchProjects } from '../../lib/collections';
 import { url } from '../../lib/urls';
 
 export async function getStaticPaths() {
@@ -17,10 +18,41 @@ export async function getStaticPaths() {
 interface Props { project: CollectionEntry<'research'>; }
 const { project } = Astro.props;
 const { Content } = await render(project);
+const publications = await getPublications();
+const publicationsByKey = new Map(publications.map(publication => [publication.data.citationKey, publication]));
+
+function resolvePublications(keys: string[], group: string) {
+  return keys.map(key => {
+    const publication = publicationsByKey.get(key);
+    if (!publication) throw new Error(`${project.id}: unknown ${group} citation key "${key}"`);
+    return publication;
+  });
+}
+
+const duplicateKeys = project.data.leadPublications.filter(key => project.data.relatedPublications.includes(key));
+if (duplicateKeys.length > 0) {
+  throw new Error(`${project.id}: citation keys cannot be both lead and related: ${duplicateKeys.join(', ')}`);
+}
+
+const leadPublications = resolvePublications(project.data.leadPublications, 'lead publication');
+const relatedPublications = resolvePublications(project.data.relatedPublications, 'related publication');
+const period = project.data.period || String(project.data.year);
 ---
 <Layout title={project.data.title} description={project.data.description}>
   <a class="text-link back-link" href={url('/research/')}><Icon name="arrow-left" />All research</a>
-  <div class="page-heading"><h1>{project.data.title}</h1><p>{project.data.description}</p><p class="page-meta">{project.data.field} · {project.data.year}</p><div class="resource-links">{project.data.links.map(link => <a class="button button-secondary" href={url(link.href)}>{link.label}<Icon name="arrow-up-right" /></a>)}</div></div>
+  <div class="page-heading"><h1>{project.data.title}</h1><p>{project.data.description}</p><p class="page-meta">{project.data.field} · {period}</p><div class="resource-links">{project.data.links.map(link => <a class="button button-secondary" href={url(link.href)}>{link.label}<Icon name="arrow-up-right" /></a>)}</div></div>
   <figure class="project-hero"><ResearchArt variant={project.data.illustration} /><figcaption class="illustration-caption">Conceptual illustration · Not clinical data or model output</figcaption></figure>
-  <article class="panel prose"><Content /></article>
+  <article class="panel prose research-prose"><Content /></article>
+  <ResearchPublicationGroup
+    id="lead-authored-work"
+    title="Lead-authored work"
+    description="First- and sole-authored publications that anchor this research direction."
+    publications={leadPublications}
+  />
+  <ResearchPublicationGroup
+    id="related-collaborative-work"
+    title="Related collaborative work"
+    description="Selected collaborations that extend or connect this research direction."
+    publications={relatedPublications}
+  />
 </Layout>

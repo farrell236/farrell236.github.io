@@ -2,6 +2,7 @@
 import { profile } from '../config';
 import { url } from '../lib/urls';
 import Icon from './Icon.astro';
+const disciplines = profile.discipline.split(' · ');
 ---
 <aside class="profile" aria-label="Researcher profile">
   <div class="profile-identity">
@@ -10,7 +11,14 @@ import Icon from './Icon.astro';
     </a>
     <div class="profile-name">
       <p class="name">{profile.name}</p>
-      <p class="discipline">{profile.discipline}</p>
+      <p class="discipline">
+        {disciplines.map((discipline, index) => (
+          <>
+            {discipline}
+            {index < disciplines.length - 1 && <><span class="discipline-separator" aria-hidden="true"> · </span><br /></>}
+          </>
+        ))}
+      </p>
     </div>
   </div>
   <p class="profile-intro">{profile.introduction}</p>

@@ -12,7 +12,7 @@ const Heading = headingLevel === 2 ? 'h2' : 'h3';
     <ResearchArt variant={project.data.illustration} />
   </a>
   <div class="research-card-copy">
-    <p class="field">{project.data.field}</p>
+    <p class="field">{project.data.field} · {project.data.period || project.data.year}</p>
     <Heading><a href={url(`/research/${project.id}/`)}>{project.data.shortTitle}</a></Heading>
     <p class="research-description">{project.data.description}</p>
     <a class="text-link" href={url(`/research/${project.id}/`)} aria-label={`Explore project: ${project.data.shortTitle}`}>Explore project<Icon /></a>

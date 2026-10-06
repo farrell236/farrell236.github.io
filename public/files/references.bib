@@ -1,0 +1,895 @@
+@inproceedings{hou2026automatic,
+  title     = {Automatic Cephalometric Landmark Localization on {CBCT}-Derived Digitally Reconstructed Radiographs for Skeletal Malocclusion Classification},
+  author    = {Hou, Benjamin and Almpani, Konstantinia and Lee, Janice S. and Lu, Zhiyong},
+  booktitle = {Oral and Dental Image Analysis (ODIN 2026)},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  year      = {2026},
+  note      = {Accepted for publication},
+  doi = {10.48550/arxiv.2608.16535},
+  eprint = {2608.16535},
+  archiveprefix = {arXiv},
+  abstract = {Manual cephalometric landmark annotation is important for craniofacial assessment but is labor-intensive and difficult to scale. We introduce CephViT, a Vision Transformer-based model for automated 2D lateral cephalometric landmark localization, and evaluate its use in downstream skeletal malocclusion classification. CephViT was trained and benchmarked on a public lateral cephalogram dataset, achieving a mean radial error of 1.28 +/- 1.42 mm and a successful detection rate of 92.0\% at 3.0 mm. Because the private evaluation cohort consisted of 3D CBCT scans, lateral cephalogram-like digitally reconstructed radiographs (DRRs) were generated from each volume and used as 2D inputs to the landmark localization model. Landmark coordinates were normalized into a common coordinate frame, and skeletal malocclusion classification was performed using landmarks shared between the reference and DRR-based pipelines. Classification performance using DRR-localized landmarks was comparable to that obtained using manually annotated reference landmarks, with accuracies of 70.0\% and 68.3\%, respectively. These results support the feasibility of automated cephalometric analysis on CBCT-derived DRRs for skeletal malocclusion assessment.},
+  code = {https://huggingface.co/nlm-dir/CephViT},
+}
+
+@article{jin2026tutorial,
+  title={Tutorial: guidance on the use of large language models for medical research},
+  author={Jin, Qiao and Wan, Nicholas and Leaman, Robert and Tian, Shubo and Wang, Zhizheng and Yang, Yifan and Wang, Zifeng and Xiong, Guangzhi and Lai, Po-Ting and Zhu, Qingqing and Hou, Benjamin and Sarfo-Gyamfi, Maame and Zhang, Gongbo and Gilson, Aidan and Bhasuran, Balu and He, Zhe and Zhang, Aidong and Sun, Jimeng and Weng, Chunhua and Summers, Ronald M. and Chen, Qingyu and Peng, Yifan and Lu, Zhiyong},
+  journal={Nature Protocols},
+  pages={1--12},
+  year={2026},
+  publisher={Nature Publishing Group UK London},
+  doi = {10.1038/s41596-026-01408-z},
+  url = {https://doi.org/10.1038/s41596-026-01408-z},
+  code = {https://github.com/ncbi-nlp/LLM-Medicine-Primer},
+  abstract = {Frontier large language models (LLMs), such as GPT-5, Claude 4.5, Gemini 3, Llama 4 and DeepSeek-R1, represent a transformative class of artificial intelligence tools capable of revolutionizing various aspects of healthcare by generating human-like responses across diverse contexts and adapting to novel tasks following human instructions. Their potential application spans a broad range of medical tasks, such as clinical documentation, matching patients to clinical trials and answering medical questions. Here in this Tutorial, we discuss an actionable set of best practices to help healthcare professionals utilize LLMs more effectively and efficiently. The overall workflow follows sequential phases from formulating the task, choosing the most appropriate LLMs, engineering the prompts, fine-tuning the requests and through to model deployment. We discuss critical considerations in identifying medical tasks that align with the core capabilities of LLMs and selecting models based on the required task, data, performance and model interface. We then review strategies such as prompt engineering and fine-tuning to adapt standard LLMs to specialized medical tasks, followed by deployment considerations including regulatory compliance, ethical guidelines and continuous monitoring for fairness and bias.},
+}
+
+@article{keenan2026ocularchat,
+  title={OcularChat: a Multimodal Large Language Model for Ophthalmology Dialogues Related to Retinal Disease},
+  author={Keenan, Tiarnan DL and Gu, Ran and Hou, Benjamin and H{\'e}bert, M{\'e}lanie and Indurkar, Asmita and Chew, Emily Y and Lu, Zhiyong},
+  journal={Investigative Ophthalmology \& Visual Science},
+  volume={67},
+  number={7},
+  pages={2494--2494},
+  year={2026},
+  publisher={The Association for Research in Vision and Ophthalmology},
+  eprint = {2604.25720},
+  archiveprefix = {arXiv},
+  code = {https://huggingface.co/ncbi/OcularChat},
+  abstract = {Despite strong performance of deep learning models in retinal disease detection, most systems produce static predictions without clinical reasoning or interactive explanation. Recent advances in multimodal large language models (MLLMs) integrate diagnostic predictions with clinically meaningful dialogue to support clinical decision-making and patient counseling. In this study, OcularChat, an MLLM, was fine-tuned from Qwen2.5-VL using simulated patient-physician dialogues to diagnose age-related macular degeneration (AMD) through visual question answering on color fundus photographs (CFPs). A total of 705,850 simulated dialogues paired with 46,167 CFPs were generated to train OcularChat to identify key AMD features and produce reasoned predictions. OcularChat demonstrated strong classification performance in AREDS, achieving accuracies of 0.954, 0.849, and 0.678 for the three diagnostic tasks: advanced AMD, pigmentary abnormalities, and drusen size, significantly outperforming existing MLLMs. On AREDS2, OcularChat remained the top-performing method on all tasks. Across three independent ophthalmologist graders, OcularChat achieved higher mean scores than a strong baseline model for advanced AMD (3.503 vs. 2.833), pigmentary abnormalities (3.272 vs. 2.828), drusen size (3.064 vs. 2.433), and overall impression (2.978 vs. 2.464) on a 5-point clinical grading rubric. Beyond strong objective performance in AMD severity classification, OcularChat demonstrated the ability to provide diagnostic reasoning, clinically relevant explanations, and interactive dialogue, with high performance in subjective ophthalmologist evaluation. These findings suggest that MLLMs may enable accurate, interpretable, and clinically useful image-based diagnosis and classification of AMD.},
+}
+
+@article{zhou2026generalisability,
+  title={Generalisability and Fairness of Retinal Age Prediction Models Across Diverse Populations},
+  author={Zhou, Yukun and Ninomiya, Takahiro and Jonas, Rahul Arvo and Hou, Benjamin and Keenan, Tiarnan D. L. and Lu, Zhiyong and Hu, Wenyi and Zhu, Zhuoting and Liu, Xujia and Cheung, Carol Y. and Keane, Pearse Andrew and Wagner, Siegfried Karl},
+  journal={Investigative Ophthalmology \& Visual Science},
+  volume={67},
+  number={7},
+  pages={837--837},
+  year={2026},
+  publisher={The Association for Research in Vision and Ophthalmology},
+  url={https://iovs.arvojournals.org/article.aspx?articleid=2813038},
+  abstract={Retinal age, an imaging biomarker derived from fundus photographs, is a promising indicator of biological ageing and systemic health risk. However, how reliably and fairly retinal age models generalise across populations with differing demographics and imaging devices remains unclear. This study evaluates internal performance, age-related fairness, and external generalisability of retinal age prediction models developed in diverse real-world cohorts. Six retinal age models were independently trained using large datasets from the UK, China, Japan, Australia, USA, and Russia. Internal performance was assessed using mean absolute error and mean error with bootstrapped 95\% confidence intervals, and external generalisability was evaluated on three heterogeneous datasets. Retinal age models exhibited population-specific behaviour, age-dependent bias, and substantial loss of accuracy when applied outside their development cohorts, highlighting the need for diverse training data, modelling strategies that reduce systematic prediction drift, and fairness-aware evaluation frameworks.}
+}
+
+@article{bloom2026analysis,
+  title={Analysis of deep learning-based segmentation of lymph nodes on full-dose and reduced-dose body CT},
+  author={Bloom, Lindsey H. and Mathai, Tejas Sudharshan and Liu, Bohan and Khoury, Brandon and Patel, Naiya and Wei, Olivia and Balamuralikrishna, Praveen T. S. and Hou, Benjamin and Solomon, Justin and Pucar, Darko and Samei, Ehsan and Jones, Elizabeth C. and Summers, Ronald M.},
+  journal={Abdominal Radiology},
+  volume={51},
+  number={6},
+  pages={3190--3201},
+  year={2026},
+  publisher={Springer},
+  doi = {10.1007/s00261-025-05253-8},
+  url = {https://doi.org/10.1007/s00261-025-05253-8},
+  abstract = {OBJECTIVES: The performance of fully automated deep learning-based models for the detection and segmentation of lymph nodes (LNs) on full- and simulated reduced-dose CT was validated. METHODS: A total of 15,341 LNs were annotated in 151 patient CTs (age 52 ± 14 years, 87 males) from the public TCIA NIH CT Lymph Nodes dataset. Two 3D nnU-Net models were trained on 90 CT scans: (1) only full dose CTs (NoAugmentation), and (2) both full- and reduced-dose CTs (Augmentation). Dose reduction from 75\% to 5\% of the full-dose was simulated using a noise-addition tool. Performance was validated on the remaining 61 CTs and an external TCIA Mediastinal LNQ dataset (120 CTs, 64 females). RESULTS: On 61 full-dose CTs, the Augmentation model detected all LNs with 67.3\% precision and 84.6\% sensitivity. For all LNs and large nodes (short axis diameter ≥ 8 mm), Dice Similarity Coefficient (DSC) was 0.83 ± 0.07 and 0.80 ± 0.14, while Hausdorff Distance (HD) error was 1.47 ± 0.91 mm and 3.2 ± 2.28 mm, respectively. Performance decreased with dose reduction (p < 0.01), reaching 73.8\% detection sensitivity and 0.75 DSC at 5\% dose. Statistically significant differences between Augmentation vs. NoAugmentation models were seen for all nodes (p < 0.001) and small nodes (p < 0.05) at 10\% and 5\% doses. On the external LNQ dataset, the Augmentation model attained a DSC of 0.76 ± 0.12 and HD of 4.7 ± 3.23 (p < 0.01) for all LNs. CONCLUSION: Degraded image quality impacted nodal delineation on reduced-dose CT. Performance improved when a model trained on both full- and reduced-dose CTs was used.},
+}
+
+@article{Hamamci2026,
+  author = {Hamamci, Ibrahim Ethem and Er, Sezgin and Wang, Chenyu and Almas, Furkan and Simsek, Ayse Gulnihan and Esirgun, Sevval Nil and Dogan, Irem and Durugol, Omer Faruk and Hou, Benjamin and Shit, Suprosanna and Dai, Weicheng and Xu, Murong and Reynaud, Hadrien and Dasdelen, Muhammed Furkan and Wittmann, Bastian and Amiranashvili, Tamaz and Simsar, Enis and Simsar, Mehmet and Erdemir, Emine Bensu and Alanbay, Abdullah and Sekuboyina, Anjany and Lafci, Berkan and Kaplan, Ahmet and Lu, Zhiyong and Polacin, Malgorzata and Kainz, Bernhard and Bluethgen, Christian and Batmanghelich, Kayhan and Ozdemir, Mehmet Kemal and Menze, Bjoern},
+  title = {Generalist foundation models from a multimodal dataset for 3D computed tomography},
+  journal = {Nature Biomedical Engineering},
+  year = {2026},
+  month = {feb},
+  day = {12},
+  doi = {10.1038/s41551-025-01599-y},
+  url = {https://doi.org/10.1038/s41551-025-01599-y},
+  issn = {2157-846X},
+  note = {https://doi.org/10.1038/s41551-025-01599-y},
+  eprint = {2403.17834},
+  archiveprefix = {arXiv},
+  abstract = {Advancements in medical imaging AI, particularly in 3D imaging, have been limited due to the scarcity of comprehensive datasets. We introduce CT-RATE, a public dataset that pairs 3D medical images with corresponding textual reports. CT-RATE comprises 25,692 non-contrast 3D chest CT scans from 21,304 unique patients. Each scan is accompanied by its corresponding radiology report. Leveraging CT-RATE, we develop CT-CLIP, a CT-focused contrastive language-image pretraining framework designed for broad applications without the need for task-specific training. We demonstrate how CT-CLIP can be used in multi-abnormality detection and case retrieval, and outperforms state-of-the-art fully supervised models across all key metrics. By combining CT-CLIP's vision encoder with a pretrained large language model, we create CT-CHAT, a vision-language foundational chat model for 3D chest CT volumes. Finetuned on over 2.7 million question-answer pairs derived from the CT-RATE dataset, CT-CHAT underscores the necessity for specialized methods in 3D medical imaging. Collectively, the open-source release of CT-RATE, CT-CLIP, and CT-CHAT not only addresses critical challenges in 3D medical imaging but also lays the groundwork for future innovations in medical AI and improved patient care.},
+  code = {https://github.com/ibrahimethemhamamci/CT-CLIP},
+}
+
+
+@article{hou2025one,
+  title={One year on: assessing progress of multimodal large language model performance on RSNA 2024 case of the day questions},
+  author={Hou, Benjamin and Mukherjee, Pritam and Batheja, Vivek and Wang, Kenneth C and Summers, Ronald M and Lu, Zhiyong},
+  journal={Radiology},
+  volume={316},
+  number={2},
+  pages={e250617},
+  year={2025},
+  publisher={Radiological Society of North America},
+  doi = {10.1148/radiol.250617},
+  url = {https://doi.org/10.1148/radiol.250617},
+  abstract = {Multimodal large language models have significantly improved in assessing RSNA Case of the Day Questions over the past year, with OpenAI’s latest models outperforming those from Google and Meta; notably, OpenAI o1 had an accuracy comparable to expert radiologists.},
+}
+
+@article{zhu2025well,
+  title={How well do multimodal LLMs interpret CT scans? An auto-evaluation framework for analyses},
+  author={Zhu, Qingqing and Hou, Benjamin and Mathai, Tejas Sudarshan and Mukherjee, Pritam and Jin, Qiao and Chen, Xiuying and Wang, Zhizheng and Cheng, Ruida and Summers, Ronald M and Lu, Zhiyong},
+  journal={Journal of Biomedical Informatics},
+  pages={104864},
+  year={2025},
+  publisher={Elsevier},
+  doi = {10.1016/j.jbi.2025.104864},
+  url = {https://doi.org/10.1016/j.jbi.2025.104864},
+  abstract = {OBJECTIVE: This study introduces a novel evaluation framework, GPTRadScore, to systematically assess the performance of multimodal large language models (MLLMs) in generating clinically accurate findings from CT imaging. Specifically, GPTRadScore leverages LLMs as an evaluation metric, aiming to provide a more accurate and clinically informed assessment than traditional language-specific methods. Using this framework, we evaluate the capability of several MLLMs, including GPT-4 with Vision (GPT-4V), Gemini Pro Vision, LLaVA-Med, and RadFM, to interpret findings in CT scans. METHODS: This retrospective study leverages a subset of the public DeepLesion dataset to evaluate the performance of several multimodal LLMs in describing findings in CT slices. GPTRadScore was developed to assess the generated descriptions (location, body part, and type) using GPT-4, alongside traditional metrics. RadFM was fine-tuned using a subset of the DeepLesion dataset with additional labeled examples targeting complex findings. Post fine-tuning, performance was reassessed using GPTRadScore to measure accuracy improvements. RESULTS: Evaluations demonstrated a high correlation of GPTRadScore with clinician assessments, with Pearson's correlation coefficients of 0.87, 0.91, 0.75, 0.90, and 0.89. These results highlight its superiority over traditional metrics, such as BLEU, METEOR, and ROUGE, and indicate that GPTRadScore can serve as a reliable evaluation metric. Using GPTRadScore, it was observed that while GPT-4V and Gemini Pro Vision outperformed other models, significant areas for improvement remain, primarily due to limitations in the datasets used for training. Fine-tuning RadFM resulted in substantial accuracy gains: location accuracy increased from 3.41\% to 12.8\%, body part accuracy improved from 29.12\% to 53\%, and type accuracy rose from 9.24\% to 30\%. These findings reinforce the hypothesis that fine-tuning RadFM can significantly enhance its performance. CONCLUSION: GPT-4 effectively correlates with expert assessments, validating its use as a reliable metric for evaluating multimodal LLMs in radiological diagnostics. Additionally, the results underscore the efficacy of fine-tuning approaches in improving the descriptive accuracy of LLM-generated medical imaging findings.},
+}
+
+@article{chen2025ai,
+  title={AI Workflow, External Validation, and Development in Eye Disease Diagnosis},
+  author={Chen, Qingyu and Keenan, Tiarnan D. L. and Agron, Elvira and Allot, Alexis and Guan, Emily and Duong, Bryant and Elsawy, Amr and Hou, Benjamin and Xue, Cancan and Bhandari, Sanjeeb and Broadhead, Geoffrey and Cousineau-Krieger, Chantal and Davis, Ellen and Gensheimer, William G. and Golshani, Cyrus A. and Grasic, David and Gupta, Seema and Haddock, Luis and Konstantinou, Eleni and Lamba, Tania and Maiberger, Michele and Mantopoulos, Dimosthenis and Mehta, Mitul C. and Elnahry, Ayman G. and AL-Nawaflh, Mutaz and Oshinsky, Arnold and Powell, Brittany E. and Purt, Boonkit and Shin, Soo and Stiefel, Hillary and Thavikulwat, Alisa T. and Wroblewski, Keith James and Tham, Yih Chung and Cheung, Chui Ming Gemmy and Cheng, Ching-Yu and Chew, Emily Y. and Hribar, Michelle R. and Chiang, Michael F. and Lu, Zhiyong},
+  journal={JAMA Network Open},
+  volume={8},
+  number={7},
+  pages={e2517204--e2517204},
+  year={2025},
+  publisher={American Medical Association},
+  doi = {10.1001/jamanetworkopen.2025.17204},
+  url = {https://doi.org/10.1001/jamanetworkopen.2025.17204},
+  eprint = {2409.15087},
+  archiveprefix = {arXiv},
+  abstract = {Importance: Timely disease diagnosis is challenging due to limited clinical availability and growing burdens. Although artificial intelligence (AI) has shown expert-level diagnostic accuracy, a lack of downstream accountability, including workflow integration, external validation, and further development, continues to hinder its clinical adoption. Objective: To address gaps in the downstream accountability of medical AI through a case study on age-related macular degeneration (AMD) diagnosis and severity classification. Design, Setting, and Participants: This diagnostic study developed and evaluated an AI-assisted diagnostic and classification workflow for AMD. Four rounds of diagnostic assessments (accuracy and time) were conducted with 24 clinicians from 12 institutions. Each round was randomized and alternated between manual (clinician diagnosis) and manual plus AI (clinician assisted by AI diagnosis), with a 1-month washout period. In total, 2880 AMD risk features were evaluated across 960 images from 240 Age-Related Eye Disease Study patient samples, both with and without AI assistance. For further development, the original DeepSeeNet model was enhanced into the DeepSeeNet+ model using 39 196 additional images from the US population and tested on 3 datasets, including an external set from Singapore. Exposure: Age-related macular degeneration risk features. Main Outcomes and Measures: The F1 score for accuracy (Wilcoxon rank sum test) and diagnostic time (linear mixed-effects model) were measured, comparing manual vs manual plus AI. For further development, the F1 score (Wilcoxon rank sum test) was again used. Results: Among 240 patients (mean [SD] age, 68.5 [5.0] years; 127 female [53\%]), AI assistance significantly improved accuracy for 23 of 24 clinicians, increasing the mean F1 score from 37.71 (95\% CI, 27.83-44.17) to 45.52 (95\% CI, 39.01-51.61), with some improvements exceeding 50\%. Manual diagnosis initially took an estimated 39.8 seconds (95\% CI, 34.1-45.6 seconds) per patient, whereas manual plus AI saved 10.3 seconds (95\% CI, -15.1 to -5.5 seconds) and remained faster by 6.9 seconds (95\% CI, 0.2-13.7 seconds) to 8.6 seconds (95\% CI, 1.8-15.3 seconds) in subsequent rounds. However, combining manual and AI did not always yield the highest accuracy or efficiency, underscoring challenges in explainability and trust. The DeepSeeNet+ model performed better in 3 test sets, achieving a significantly higher F1 score than the Singapore cohort (52.43 [95\% CI, 44.38-61.00] vs 38.95 [95\% CI, 30.50-47.45]). Conclusions and Relevance: In this diagnostic study, AI assistance was associated with improved accuracy and time efficiency for AMD diagnosis. Further development is essential for enhancing AI generalizability across diverse populations. These findings highlight the need for downstream accountability during early-stage clinical evaluations of medical AI.},
+}
+
+@article{zhuang2025mrisegmenter,
+  title={MRISegmenter: A Fully Accurate and Robust Automated Multiorgan and Structure Segmentation Tool for T1-weighted Abdominal MRI},
+  author={Zhuang, Yan and Mathai, Tejas Sudharshan and Mukherjee, Pritam and Khoury, Brandon and Kim, Boah and Hou, Benjamin and Rabbee, Nusrat and Suri, Abhinav and Summers, Ronald M},
+  journal={Radiology},
+  volume={315},
+  number={1},
+  pages={e241979},
+  year={2025},
+  publisher={Radiological Society of North America},
+  doi = {10.1148/radiol.241979},
+  url = {https://doi.org/10.1148/radiol.241979},
+  abstract = {MRISegmenter provided accurate and robust segmentation of 62 organs and structures, including 15 main organs, seven vessels, eight muscles, and 32 bones at T1-weighted abdominal MRI.},
+  code = {https://github.com/rsummers11/MRISegmenter},
+}
+
+@article{yang2024beyond,
+  title={Beyond Multiple-Choice Accuracy: Real-World Challenges of Implementing Large Language Models in Healthcare},
+  author={Yang, Yifan and Jin, Qiao and Zhu, Qingqing and Wang, Zhizheng and Erramuspe {\'A}lvarez, Francisco and Wan, Nicholas and Hou, Benjamin and Lu, Zhiyong},
+  journal={Annual Review of Biomedical Data Science},
+  volume={8},
+  year={2024},
+  publisher={Annual Reviews},
+  doi = {10.1146/annurev-biodatasci-103123-094851},
+  eprint = {2410.18460},
+  archiveprefix = {arXiv},
+  abstract = {Large Language Models (LLMs) have gained significant attention in the medical domain for their human-level capabilities, leading to increased efforts to explore their potential in various healthcare applications. However, despite such a promising future, there are multiple challenges and obstacles that remain for their real-world uses in practical settings. This work discusses key challenges for LLMs in medical applications from four unique aspects: operational vulnerabilities, ethical and social considerations, performance and assessment difficulties, and legal and regulatory compliance. Addressing these challenges is crucial for leveraging LLMs to their full potential and ensuring their responsible integration into healthcare.},
+}
+
+@article{mukherjee2024evaluation,
+  title={Evaluation of GPT Large Language Model Performance on RSNA 2023 Case of the Day Questions},
+  author={Mukherjee, Pritam and Hou, Benjamin and Suri, Abhinav and Zhuang, Yan and Parnell, Christopher and Lee, Nicholas and Stroie, Oana and Jain, Ravi and Wang, Kenneth C. and Sharma, Komal and Summers, Ronald M.},
+  journal={Radiology},
+  volume={313},
+  number={1},
+  pages={e240609},
+  year={2024},
+  publisher={Radiological Society of North America},
+  doi = {10.1148/radiol.240609},
+  url = {https://doi.org/10.1148/radiol.240609},
+  abstract = {Human raters did not significantly outperform OpenAI’s GPT-4V in assessing RSNA 2023 Case of the Day questions nor did their accuracy improve with the assistance of GPT-4V.},
+}
+
+@article{hou2024deep,
+  title={Deep Learning Segmentation of Ascites on Abdominal CT Scans for Automatic Volume Quantification},
+  author={Hou, Benjamin and Lee, Sung-Won and Lee, Jung-Min and Koh, Christopher and Xiao, Jing and Pickhardt, Perry J and Summers, Ronald M},
+  journal={Radiology: Artificial Intelligence},
+  pages={e230601},
+  year={2024},
+  publisher={Radiological Society of North America},
+  doi = {10.1148/ryai.230601},
+  url = {https://doi.org/10.1148/ryai.230601},
+  eprint = {2406.15979},
+  archiveprefix = {arXiv},
+  abstract = {“Just Accepted” papers have undergone full peer review and have been accepted for publication in Radiology: Artificial Intelligence. This article will undergo copyediting, layout, and proof review before it is published in its final version. Please note that during production of the final copyedited article, errors may be discovered which could affect the content. Purpose To evaluate the performance of an automated deep learning method in detecting ascites and subsequently quantifying its volume in patients with liver cirrhosis and ovarian cancer. Materials and Methods This retrospective study included contrast-enhanced and noncontrast abdominal-pelvic CT scans of patients with cirrhotic ascites and patients with ovarian cancer from two institutions, National Institutes of Health (NIH) and University of Wisconsin (UofW). The model, trained on The Cancer Genome Atlas Ovarian Cancer dataset (mean age, 60 years ± 11 [SD]; 143 female), was tested on two internal (NIH-LC and NIH-OV) and one external dataset (UofW-LC). Its performance was measured by the Dice coefficient, standard deviations, and 95\% confidence intervals, focusing on ascites volume in the peritoneal cavity. Results On NIH-LC (25 patients; mean age, 59 years ± 14; 14 male) and NIH-OV (166 patients; mean age, 65 years ± 9; all female), the model achieved Dice scores of 85.5\% ± 6.1\% (CI: 83.1\%–87.8\%) and 82.6\% ± 15.3\% (CI: 76.4\%–88.7\%), with median volume estimation errors of 19.6\% (IQR: 13.2\%–29.0\%) and 5.3\% (IQR: 2.4\%– 9.7\%), respectively. On UofW-LC (124 patients; mean age, 46 years ± 12; 73 female), the model had a Dice score of 83.0\% ± 10.7\% (CI: 79.8\%–86.3\%) and median volume estimation error of 9.7\% (IQR: 4.5\%–15.1\%). The model showed strong agreement with expert assessments, with r2 values of 0.79, 0.98, and 0.97 across the test sets. Conclusion The proposed deep learning method performed well in segmenting and quantifying the volume of ascites in concordance with expert radiologist assessments. ©RSNA, 2024},
+}
+
+@article{hou2024enhanced,
+  title={Enhanced muscle and fat segmentation for CT-based body composition analysis: a comparative study},
+  author={Hou, Benjamin and Mathai, Tejas Sudharshan and Liu, Jianfei and Parnell, Christopher and Summers, Ronald M},
+  journal={International journal of computer assisted radiology and surgery},
+  pages={1--8},
+  year={2024},
+  publisher={Springer},
+  doi = {10.1007/s11548-024-03167-2},
+  url = {https://doi.org/10.1007/s11548-024-03167-2},
+  abstract = {Abstract Purpose Body composition measurements from routine abdominal CT can yield personalized risk assessments for asymptomatic and diseased patients. In particular, attenuation and volume measures of muscle and fat are associated with important clinical outcomes, such as cardiovascular events, fractures, and death. This study evaluates the reliability of an Internal tool for the segmentation of muscle and fat (subcutaneous and visceral) as compared to the well-established public TotalSegmentator tool. Methods We assessed the tools across 900 CT series from the publicly available SAROS dataset, focusing on muscle, subcutaneous fat, and visceral fat. The Dice score was employed to assess accuracy in subcutaneous fat and muscle segmentation. Due to the lack of ground truth segmentations for visceral fat, Cohen’s Kappa was utilized to assess segmentation agreement between the tools. Results Our Internal tool achieved a 3\% higher Dice (83.8 vs. 80.8) for subcutaneous fat and a 5\% improvement (87.6 vs. 83.2) for muscle segmentation, respectively. A Wilcoxon signed-rank test revealed that our results were statistically different with p < 0.01. For visceral fat, the Cohen’s Kappa score of 0.856 indicated near-perfect agreement between the two tools. Our internal tool also showed very strong correlations for muscle volume ( R $$^2$$ 2 =0.99), muscle attenuation ( R $$^2$$ 2 =0.93), and subcutaneous fat volume ( R $$^2$$ 2 =0.99) with a moderate correlation for subcutaneous fat attenuation ( R $$^2$$ 2 =0.45). Conclusion Our findings indicated that our Internal tool outperformed TotalSegmentator in measuring subcutaneous fat and muscle. The high Cohen’s Kappa score for visceral fat suggests a reliable level of agreement between the two tools. These results demonstrate the potential of our tool in advancing the accuracy of body composition analysis.},
+}
+
+@inproceedings{zhu2024leveraging,
+  title={Leveraging Professional Radiologists' Expertise to Enhance LLMs' Evaluation for AI-generated Radiology Reports},
+  author={Zhu, Qingqing and Chen, Xiuying and Jin, Qiao and Hou, Benjamin and Mathai, Tejas Sudharshan and Mukherjee, Pritam and Gao, Xin and Summers, Ronald M and Lu, Zhiyong},
+  booktitle={2024 IEEE 12th International Conference on Healthcare Informatics (ICHI)},
+  pages={402--411},
+  year={2024},
+  organization={IEEE},
+  doi = {10.1109/ichi61247.2024.00058},
+  url = {https://doi.org/10.1109/ichi61247.2024.00058},
+  abstract = {In radiology, Artificial Intelligence (AI) has significantly advanced report generation, but automatic evaluation of these AI-produced reports remains challenging. Current metrics, such as Conventional Natural Language Generation (NLG) and Clinical Efficacy (CE), often fall short in capturing the semantic intricacies of clinical contexts or overemphasize clinical details, undermining report clarity. To overcome these issues, our proposed method synergizes the expertise of professional radiologists with Large Language Models (LLMs), like GPT-3.5 and GPT-4. Utilizing In-Context Instruction Learning (ICIL) and Chain of Thought (CoT) reasoning, our approach aligns LLM evaluations with radiologist standards, enabling detailed comparisons between human and AI-generated reports. This is further enhanced by a Regression model that aggregates sentence evaluation scores. Experimental results show that our "Detailed GPT-4 (5-shot)" model achieves a correlation that is 0.48, outperforming the METEOR metric by 0.19, while our "Regressed GPT-4" model shows even greater alignment(0.64) with expert evaluations, exceeding the best existing metric by a 0.35 margin. Moreover, the robustness of our explanations has been validated through a thorough iterative strategy. We plan to publicly release annotations from radiology experts, setting a new standard for accuracy in future assessments. This underscores the potential of our approach in enhancing the quality assessment of AI-driven medical reports.},
+}
+
+@inproceedings{DBLP:conf/miccai/ZhuangHMMKS23,
+  author       = {Yan Zhuang and
+                  Benjamin Hou and
+                  Tejas Sudharshan Mathai and
+                  Pritam Mukherjee and
+                  Boah Kim and
+                  Ronald M. Summers},
+  title        = {Semantic Image Synthesis for Abdominal {CT}},
+  booktitle    = {{DGM4MICCAI}},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {14533},
+  pages        = {214--224},
+  publisher    = {Springer},
+  year         = {2023},
+  doi = {10.1007/978-3-031-53767-7\_21},
+  eprint = {2312.06453},
+  archiveprefix = {arXiv},
+  abstract = {As a new emerging and promising type of generative models, diffusion models have proven to outperform Generative Adversarial Networks (GANs) in multiple tasks, including image synthesis. In this work, we explore semantic image synthesis for abdominal CT using conditional diffusion models, which can be used for downstream applications such as data augmentation. We systematically evaluated the performance of three diffusion models, as well as to other state-of-the-art GAN-based approaches, and studied the different conditioning scenarios for the semantic mask. Experimental results demonstrated that diffusion models were able to synthesize abdominal CT images with better quality. Additionally, encoding the mask and the input separately is more effective than naïve concatenating.},
+}
+
+
+@article{doi:10.1148/radiol.231147,
+author = {Mukherjee, Pritam and Hou, Benjamin and Lanfredi, Ricardo B. and Summers, Ronald M.},
+title = {Feasibility of Using the Privacy-preserving Large Language Model Vicuna for Labeling Radiology Reports},
+journal = {Radiology},
+volume = {309},
+number = {1},
+pages = {e231147},
+year = {2023},
+doi = {10.1148/radiol.231147},
+    note ={PMID: 37815442},
+  url = {https://doi.org/10.1148/radiol.231147},
+  abstract = {Background Large language models (LLMs) such as ChatGPT, though proficient in many text-based tasks, are not suitable for use with radiology reports due to patient privacy constraints. Purpose To test the feasibility of using an alternative LLM (Vicuna-13B) that can be run locally for labeling radiography reports. Materials and Methods Chest radiography reports from the MIMIC-CXR and National Institutes of Health (NIH) data sets were included in this retrospective study. Reports were examined for 13 findings. Outputs reporting the presence or absence of the 13 findings were generated by Vicuna by using a single-step or multistep prompting strategy (prompts 1 and 2, respectively). Agreements between Vicuna outputs and CheXpert and CheXbert labelers were assessed using Fleiss κ. Agreement between Vicuna outputs from three runs under a hyperparameter setting that introduced some randomness (temperature, 0.7) was also assessed. The performance of Vicuna and the labelers was assessed in a subset of 100 NIH reports annotated by a radiologist with use of area under the receiver operating characteristic curve (AUC). Results A total of 3269 reports from the MIMIC-CXR data set (median patient age, 68 years [IQR, 59–79 years]; 161 male patients) and 25 596 reports from the NIH data set (median patient age, 47 years [IQR, 32–58 years]; 1557 male patients) were included. Vicuna outputs with prompt 2 showed, on average, moderate to substantial agreement with the labelers on the MIMIC-CXR (κ median, 0.57 [IQR, 0.45–0.66] with CheXpert and 0.64 [IQR, 0.45–0.68] with CheXbert) and NIH (κ median, 0.52 [IQR, 0.41–0.65] with CheXpert and 0.55 [IQR, 0.41–0.74] with CheXbert) data sets, respectively. Vicuna with prompt 2 performed at par (median AUC, 0.84 [IQR, 0.74–0.93]) with both labelers on nine of 11 findings. Conclusion In this proof-of-concept study, outputs of the LLM Vicuna reporting the presence or absence of 13 findings on chest radiography reports showed moderate to substantial agreement with existing labelers. © RSNA, 2023 Supplemental material is available for this article. See also the editorial by Cai in this issue.},
+}
+
+
+@inproceedings{zhao2023high,
+  title={High-Fidelity Image Synthesis from Pulmonary Nodule Lesion Maps using Semantic Diffusion Model},
+  author={Zhao, Xuan and Hou, Benjamin},
+  booktitle={Medical Imaging with Deep Learning, short paper track},
+  year={2023},
+  doi = {10.33140/jeee.02.04.12},
+  url = {http://doi.org/10.33140/jeee.02.04.12},
+  abstract = {Lung cancer has been one of the leading causes of cancer-related deaths worldwide for years. With the emergence of deep learning, computer-assisted diagnosis (CAD) models based on learning algorithms can accelerate the nodule screening process, providing valuable assistance to radiologists in their daily clinical workflows. However, developing such robust and accurate models often requires large-scale and diverse medical datasets with high-quality annotations. Generating synthetic data provides a pathway for augmenting datasets at a larger scale. Therefore, in this paper, we explore the use of Semantic Diffusion Models (SDM) to generate high-fidelity pulmonary CT images from segmentation maps. We utilize annotation information from the LUNA16 dataset to create paired CT images and masks, and assess the quality of the generated images using the Fr´echet Inception Distance (FID), as well as on two common clinical downstream tasks: nodule detection and nodule localization. Achieving improvements of 3.96\% for detection accuracy and 8.50\% for AP50 in nodule localization task, respectively, demonstrates the feasibility of the approach.},
+}
+
+@INPROCEEDINGS{lance2023,
+  author={Liu, Liangchen and Hou, Benjamin and Nag, Manas and Liu, Jianfei and Hasani, Navid and Shen, Thomas and Zhu, Yingying and Farhadi, Faraz and Delie, Taylor and Morris, Michael A. and Saboury, Babak and Xiao, Jing and Summers, Ronald M.},
+  booktitle={2023 IEEE 20th International Symposium on Biomedical Imaging (ISBI)}, 
+  title={Improving Automatic Segmentation of Lymphoma with Additional Medical Knowledge Priors}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-4},
+  doi = {10.1109/isbi53787.2023.10230634},
+  url = {http://dx.doi.org/10.1109/isbi53787.2023.10230634},
+  abstract = {Lymphoma is a type of malignant tumor that is often fatal to people of all ages. Positron Emission Tomography (PET) / Computed Tomography (CT) is the primary imaging method to assess lymphoma and monitor treatment response. As PET is sensitive to identify lymphoma regions while CT provides detailed anatomic information, the two imaging modalities can complement each other to enable improved diagnosis. However, automatic lymphoma segmentation is still a challenging task due to its substantial size and shape variability and limited datasets for training. To that end, we designed an automatic lymphoma segmentation model with nnU-net as the backbone. Our pipeline incorporates pre- and post- processing mechanisms to remove regions of normal increased radiotracer uptake, and augment training with non-lymphoma samples. The proposed method was validated on the PET/CT scans from forty-six patients. Experimental results revealed that the Dice coefficient improved from 0.263 to 0.477 in comparison with the baseline nnU-Net. The results and analysis demonstrate the efficacy of the proposed method.},
+}
+
+@article{Hou:23,
+author = {Benjamin Hou},
+journal = {Biomed. Opt. Express},
+keywords = {Computed tomography; Image processing; Image quality; Medical imaging; Retina scanning; X ray imaging},
+number = {2},
+pages = {533--549},
+publisher = {Optica Publishing Group},
+title = {High-fidelity diabetic retina fundus image synthesis from freestyle lesion maps},
+volume = {14},
+month = {Feb},
+year = {2023},
+url = {https://opg.optica.org/boe/abstract.cfm?URI=boe-14-2-533},
+doi = {10.1364/BOE.477906},
+  abstract = {Retina fundus imaging for diagnosing diabetic retinopathy (DR) is an efficient and patient-friendly modality, where many high-resolution images can be easily obtained for accurate diagnosis. With the advancements of deep learning, data-driven models may facilitate the process of high-throughput diagnosis especially in areas with less availability of certified human experts. Many datasets of DR already exist for training learning-based models. However, most are often unbalanced, do not have a large enough sample count, or both. This paper proposes a two-stage pipeline for generating photo-realistic retinal fundus images based on either artificially generated or free-hand drawn semantic lesion maps. The first stage uses a conditional StyleGAN to generate synthetic lesion maps based on a DR severity grade. The second stage then uses GauGAN to convert the synthetic lesion maps into high resolution fundus images. We evaluate the photo-realism of generated images using the Fréchet inception distance (FID), and show the efficacy of our pipeline through downstream tasks, such as; dataset augmentation for automatic DR grading and lesion segmentation.},
+}
+
+@inproceedings{10.1117/12.2654027,
+author = {Manas K. Nag and Jianfei Liu and Seung Yeon Shin and Benjamin Hou and Liangchen Liu and Perry J. Pickhardt and Jung-Min Lee and Ronald M. Summers},
+title = {{Improved ascites segmentation with bladder identification using anatomical location residual U-Net}},
+volume = {12465},
+booktitle = {Medical Imaging 2023: Computer-Aided Diagnosis},
+editor = {Khan M. Iftekharuddin and Weijie Chen},
+organization = {International Society for Optics and Photonics},
+publisher = {SPIE},
+pages = {1246517},
+keywords = {Advanced Ovarian cancer,  Ascites Segmentation, Bladder Segmentation, Anatomical Location In- formation, 3D Residual U-Net},
+year = {2023},
+doi = {10.1117/12.2654027},
+URL = {https://doi.org/10.1117/12.2654027},
+  abstract = {Ascites generally manifests in the advance stage of ovarian cancer, and often mimicked by abdominal fluids such as urine in bladder. Segmentation of ascites in the pelvic region becomes increasingly challenging when the bladder is filled with urine. Anatomical location is utilized in this work to distinguish ascites from bladder. The location information is computed from a body part regressor and concatenated with contrast-enhanced computed tomography (CT) data through an embedding layer. A 3D residual U-Net is trained on the concatenated data to segment ascites and identify bladder simultaneously. 112 CT scans were used in this study; 55 of them were used for training, 20 for validation, and the remaining 37 for testing. Dice coefficient score and Jacard index are two metrics to evaluate ascites and bladder segmentation. In comparison with 3D residual U-Net, the addition of anatomical location information and two-class segmentation improved the average dice scores of ascites and urine segmentation from 0.44±0.23 to 0.51±0.16 and 0.36±0.15 to 0.40±0.13 respectively. The average volume errors of ascites and urine were reduced from 1.81±3.09 to 0.93±1.85 liters and 0.6±0.81 to 0.56±0.76 liters, respectively. These results suggested that anatomical location information and two-class segmentation are the key features to improve ascites segmentation by differentiating bladder filled with urine regions.},
+}
+
+
+@article{hou2022segmentation,
+  title={Segmentation of Ascites on Abdominal CT Scans for the Assessment of Ovarian Cancer},
+  author={Hou, Benjamin and Nag, Manas K. and Lee, Jung-Min and Koh, Christopher and Summers, Ronald M.},
+  journal={MedNeurIPS Workshop},
+  year={2022},
+  url = {https://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/97.pdf},
+  abstract = {Quantification of the volume of ascites can be an accurate predictor of clinical outcomes in certain pathological settings, including ovarian cancer. Because ascites is a liquid, accurate segmentation can be challenging. This paper shows that tuning nnU-Net, a model that learns the heuristics of the data, can achieve state-of-the-art segmentation performance. The trained model achieved a Dice score of 0.66, with 0.67 precision and 0.68 recall on pathological test cases, improving on the prior state of the art.},
+}
+
+@inproceedings{DBLP:conf/eccv/SchmidtkeHVK22,
+  author       = {Luca Schmidtke and
+                  Benjamin Hou and
+                  Athanasios Vlontzos and
+                  Bernhard Kainz},
+  title        = {Self-supervised 3D Human Pose Estimation in Static Video via Neural
+                  Rendering},
+  booktitle    = {{ECCV} Workshops {(3)}},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {13803},
+  pages        = {704--713},
+  publisher    = {Springer},
+  year         = {2022},
+  doi = {10.1007/978-3-031-25066-8\_42},
+  eprint = {2210.04514},
+  archiveprefix = {arXiv},
+  abstract = {Inferring 3D human pose from 2D images is a challenging and long-standing problem in the field of computer vision with many applications including motion capture, virtual reality, surveillance or gait analysis for sports and medicine. We present preliminary results for a method to estimate 3D pose from 2D video containing a single person and a static background without the need for any manual landmark annotations. We achieve this by formulating a simple yet effective self-supervision task: our model is required to reconstruct a random frame of a video given a frame from another timepoint and a rendered image of a transformed human shape template. Crucially for optimisation, our ray casting based rendering pipeline is fully differentiable, enabling end to end training solely based on the reconstruction task.},
+}
+
+@inproceedings{DBLP:conf/eccv/SchluterTHK22,
+  author    = {Hannah M. Schl{\"{u}}ter and
+               Jeremy Tan and
+               Benjamin Hou and
+               Bernhard Kainz},
+  title     = {Natural Synthetic Anomalies for Self-supervised Anomaly Detection
+               and Localization},
+  booktitle = {{ECCV} {(31)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {13691},
+  pages     = {474--489},
+  publisher = {Springer},
+  year      = {2022},
+  doi = {10.1007/978-3-031-19821-2\_27},
+  url = {https://doi.org/10.1007/978-3-031-19821-2\_27},
+  eprint = {2109.15222},
+  archiveprefix = {arXiv},
+  code = {https://github.com/hmsch/natural-synthetic-anomalies},
+  abstract = {We introduce a simple and intuitive self-supervision task, Natural Synthetic Anomalies (NSA), for training an end-to-end model for anomaly detection and localization using only normal training data. NSA integrates Poisson image editing to seamlessly blend scaled patches of various sizes from separate images. This creates a wide range of synthetic anomalies which are more similar to natural sub-image irregularities than previous data-augmentation strategies for self-supervised anomaly detection. We evaluate the proposed method using natural and medical images. Our experiments with the MVTec AD dataset show that a model trained to localize NSA anomalies generalizes well to detecting real-world a priori unknown types of manufacturing defects. Our method achieves an overall detection AUROC of 97.2 outperforming all previous methods that learn without the use of additional datasets. Code available at https://github.com/hmsch/natural-synthetic-anomalies.},
+}
+
+@article{melba:2022:013:tan,
+  title={Detecting Outliers with Foreign Patch Interpolation},
+  author={Tan, Jeremy and Hou, Benjamin and Batten, James and Qiu, Huaqi and Kainz, Bernhard},
+  journal={Machine Learning for Biomedical Imaging},
+  volume={1},
+  issue={April 2022 issue},
+  year={2022},
+  doi = {10.59275/j.melba.2022-e651},
+  url = {https://doi.org/10.59275/j.melba.2022-e651},
+  eprint = {2011.04197},
+  archiveprefix = {arXiv},
+  abstract = {In medical imaging, outliers can contain hypo/hyper-intensities, minor deformations, or completely altered anatomy. To detect these irregularities it is helpful to learn the features present in both normal and abnormal images. However this is difficult because of the wide range of possible abnormalities and also the number of ways that normal anatomy can vary naturally. As such, we leverage the natural variations in normal anatomy to create a range of synthetic abnormalities. Specifically, the same patch region is extracted from two independent samples and replaced with an interpolation between both patches. The interpolation factor, patch size, and patch location are randomly sampled from uniform distributions. A wide residual encoder decoder is trained to give a pixel-wise prediction of the patch and its interpolation factor. This encourages the network to learn what features to expect normally and to identify where foreign patterns have been introduced. The estimate of the interpolation factor lends itself nicely to the derivation of an outlier score. Meanwhile the pixel-wise output allows for pixel- and subject- level predictions using the same model. Our code is available at https://github.com/jemtan/FPI},
+}
+
+@article{DBLP:journals/tmi/ZimmererFIJAPKR22,
+  author    = {David Zimmerer and
+               Peter M. Full and
+               Fabian Isensee and
+               Paul J{\"{a}}ger and
+               Tim Adler and
+               Jens Petersen and
+               Gregor K{\"{o}}hler and
+               Tobias Ro{\ss} and
+               Annika Reinke and
+               Antanas Kascenas and
+               Bj{\o}rn Sand Jensen and
+               Alison Q. O'Neil and
+               Jeremy Tan and
+               Benjamin Hou and
+               James Batten and
+               Huaqi Qiu and
+               Bernhard Kainz and
+               Nina Shvetsova and
+               Irina Fedulova and
+               Dmitry V. Dylov and
+               Baolun Yu and
+               Jianyang Zhai and
+               Jingtao Hu and
+               Runxuan Si and
+               Sihang Zhou and
+               Siqi Wang and
+               Xinyang Li and
+               Xuerun Chen and
+               Yang Zhao and
+               Sergio Naval Marimont and
+               Giacomo Tarroni and
+               Victor Saase and
+               Lena Maier{-}Hein and
+               Klaus H. Maier{-}Hein},
+  title     = {{MOOD} 2020: {A} Public Benchmark for Out-of-Distribution Detection
+               and Localization on Medical Images},
+  journal   = {{IEEE} Trans. Medical Imaging},
+  volume    = {41},
+  number    = {10},
+  pages     = {2728--2738},
+  year      = {2022},
+  doi = {10.1109/tmi.2022.3170077},
+  url = {https://doi.org/10.1109/tmi.2022.3170077},
+  abstract = {Detecting Out-of-Distribution (OoD) data is one of the greatest challenges in safe and robust deployment of machine learning algorithms in medicine. When the algorithms encounter cases that deviate from the distribution of the training data, they often produce incorrect and over-confident predictions. OoD detection algorithms aim to catch erroneous predictions in advance by analysing the data distribution and detecting potential instances of failure. Moreover, flagging OoD cases may support human readers in identifying incidental findings. Due to the increased interest in OoD algorithms, benchmarks for different domains have recently been established. In the medical imaging domain, for which reliable predictions are often essential, an open benchmark has been missing. We introduce the Medical-Out-Of-Distribution-Analysis-Challenge (MOOD) as an open, fair, and unbiased benchmark for OoD methods in the medical imaging domain. The analysis of the submitted algorithms shows that performance has a strong positive correlation with the perceived difficulty, and that all algorithms show a high variance for different anomalies, making it yet hard to recommend them for clinical practice. We also see a strong correlation between challenge ranking and performance on a simple toy test set, indicating that this might be a valuable addition as a proxy dataset during anomaly detection algorithm development.},
+  code = {https://github.com/MIC-DKFZ/mood},
+}
+
+@inproceedings{DBLP:conf/miccai/ReynaudVHBLK21,
+  author    = {Hadrien Reynaud and
+               Athanasios Vlontzos and
+               Benjamin Hou and
+               Arian Beqiri and
+               Paul Leeson and
+               Bernhard Kainz},
+  title     = {Ultrasound Video Transformers for Cardiac Ejection Fraction Estimation},
+  booktitle = {{MICCAI} {(6)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12906},
+  pages     = {495--505},
+  publisher = {Springer},
+  year      = {2021},
+  doi = {10.1007/978-3-030-87231-1\_48},
+  url = {https://doi.org/10.1007/978-3-030-87231-1\_48},
+  eprint = {2107.00977},
+  archiveprefix = {arXiv},
+  abstract = {Cardiac ultrasound imaging is used to diagnose various heart diseases. Common analysis pipelines involve manual processing of the video frames by expert clinicians. This suffers from intra- and inter-observer variability. We propose a novel approach to ultrasound video analysis using a transformer architecture based on a Residual Auto-Encoder Network and a BERT model adapted for token classification. This enables videos of any length to be processed. We apply our model to the task of End-Systolic (ES) and End-Diastolic (ED) frame detection and the automated computation of the left ventricular ejection fraction. We achieve an average frame distance of 3.36 frames for the ES and 7.17 frames for the ED on videos of arbitrary length. Our end-to-end learnable approach can estimate the ejection fraction with a MAE of 5.95 and $R^2$ of 0.52 in 0.15s per video, showing that segmentation is not the only way to predict ejection fraction. Code and models are available at https://github.com/HReynaud/UVT.},
+  code = {https://github.com/HReynaud/UVT},
+}
+
+@inproceedings{DBLP:conf/miccai/TanKHBK21,
+  author    = {Jeremy Tan and
+               Turkay Kart and
+               Benjamin Hou and
+               James Batten and
+               Bernhard Kainz},
+  title     = {MetaDetector: Detecting Outliers by Learning to Learn from Self-supervision},
+  booktitle = {MIDOG/MOOD/Learn2Reg@MICCAI},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {13166},
+  pages     = {119--126},
+  publisher = {Springer},
+  year      = {2021},
+  doi = {10.1007/978-3-030-97281-3\_18},
+  url = {https://doi.org/10.1007/978-3-030-97281-3\_18},
+  abstract = {Using self-supervision in anomaly detection can increase sensitivity to subtle irregularities, but sensitivity to some classes of outlier can reduce sensitivity to others. This work explores whether meta-learning can make self-supervised methods more adaptive. It constructs a few-shot task from the test input and normal reference images, then uses second-order gradients to learn how to adapt while applying strong regularization near the bottleneck of an encoder-decoder architecture.},
+}
+
+@inproceedings{DBLP:conf/miccai/TanHDSRK21,
+  author    = {Jeremy Tan and
+               Benjamin Hou and
+               Thomas Day and
+               John M. Simpson and
+               Daniel Rueckert and
+               Bernhard Kainz},
+  title     = {Detecting Outliers with Poisson Image Interpolation},
+  booktitle = {{MICCAI} {(5)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12905},
+  pages     = {581--591},
+  publisher = {Springer},
+  year      = {2021},
+  doi = {10.1007/978-3-030-87240-3\_56},
+  url = {https://doi.org/10.1007/978-3-030-87240-3\_56},
+  eprint = {2107.02622},
+  archiveprefix = {arXiv},
+  code = {https://github.com/jemtan/PII},
+  abstract = {Supervised learning of every possible pathology is unrealistic for many primary care applications like health screening. Image anomaly detection methods that learn normal appearance from only healthy data have shown promising results recently. We propose an alternative to image reconstruction-based and image embedding-based methods and propose a new self-supervised method to tackle pathological anomaly detection. Our approach originates in the foreign patch interpolation (FPI) strategy that has shown superior performance on brain MRI and abdominal CT data. We propose to use a better patch interpolation strategy, Poisson image interpolation (PII), which makes our method suitable for applications in challenging data regimes. PII outperforms state-of-the-art methods by a good margin when tested on surrogate tasks like identifying common lung anomalies in chest X-rays or hypo-plastic left heart syndrome in prenatal, fetal cardiac ultrasound images. Code available at https://github.com/jemtan/PII.},
+}
+
+@inproceedings{DBLP:conf/miccai/HouKSK21,
+  author    = {Benjamin Hou and
+               Georgios Kaissis and
+               Ronald M. Summers and
+               Bernhard Kainz},
+  title     = {{RATCHET:} Medical Transformer for Chest X-ray Diagnosis and Reporting},
+  booktitle = {{MICCAI} {(7)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12907},
+  pages     = {293--303},
+  publisher = {Springer},
+  year      = {2021},
+  doi = {10.1007/978-3-030-87234-2\_28},
+  url = {https://doi.org/10.1007/978-3-030-87234-2\_28},
+  eprint = {2107.02104},
+  archiveprefix = {arXiv},
+  code = {https://github.com/farrell236/RATCHET},
+  abstract = {Chest radiographs are one of the most common diagnostic modalities in clinical routine. It can be done cheaply, requires minimal equipment, and the image can be diagnosed by every radiologists. However, the number of chest radiographs obtained on a daily basis can easily overwhelm the available clinical capacities. We propose RATCHET: RAdiological Text Captioning for Human Examined Thoraces. RATCHET is a CNN-RNN-based medical transformer that is trained end-to-end. It is capable of extracting image features from chest radiographs, and generates medically accurate text reports that fit seamlessly into clinical work flows. The model is evaluated for its natural language generation ability using common metrics from NLP literature, as well as its medically accuracy through a surrogate report classification task. The model is available for download at: http://www.github.com/farrell236/RATCHET.},
+}
+
+@inproceedings{son2021synthesis,
+  title={Synthesis of Diabetic Retina Fundus Images Using Semantic Label Generation},
+  author={Son, Joon-Ho and Alansary, Amir and Rueckert, Daniel and Kainz, Bernhard and Hou, Benjamin},
+  booktitle={ Medical Imaging with Deep Learning},
+  year={2021},
+  organization={L{\"u}beck},
+  url = {https://openreview.net/pdf?id=wiKDehhdnz},
+  code = {https://github.com/semantic-retina/semantic-retina-generation},
+  abstract = {Automatic segmentation of retinal lesions remains challenging, in part because accurate lesion-segmentation datasets are scarce. This paper proposes a two-stage process for generating photorealistic fundus images conditioned on synthetic semantic labels, and demonstrates its potential for downstream applications including diabetic-retinopathy grading, dataset balancing and training.},
+}
+
+@inproceedings{miolane:hal-02908006,
+  TITLE = {{Introduction to Geometric Learning in Python with Geomstats}},
+  AUTHOR = {Miolane, Nina and Guigui, Nicolas and Zaatiti, Hadi and Shewmake, Christian and Hajri, Hatem and Brooks, Daniel and Le Brigant, Alice and Mathe, Johan and Hou, Benjamin and Thanwerdas, Yann and Heyder, Stefan and Peltre, Olivier and Koep, Niklas and Cabanes, Yann and Gerald, Thomas and Chauchat, Paul and Kainz, Bernhard and Donnat, Claire and Holmes, Susan and Pennec, Xavier},
+  URL = {https://hal.inria.fr/hal-02908006},
+  BOOKTITLE = {{SciPy 2020 - 19th Python in Science Conference}},
+  ADDRESS = {Austin, Texas, United States},
+  EDITOR = {Meghann Agarwal and Chris Calloway and Dillon Niederhut and David Shupe},
+  PAGES = {48-57},
+  YEAR = {2020},
+  MONTH = Jul,
+  DOI = {10.25080/Majora-342d178e-007},
+  KEYWORDS = {Index Terms-differential geometry ; statistics ; manifold ; machine learning},
+  PDF = {https://hal.inria.fr/hal-02908006/file/geomstats.pdf},
+  HAL_ID = {hal-02908006},
+  HAL_VERSION = {v1},
+  abstract = {There is a growing interest in leveraging differential geometry in the machine learning community.Yet, the adoption of the associated geometric computations has been inhibited by the lack of a reference implementation.Such an implementation should typically allow its users: (i) to get intuition on concepts from differential geometry through a hands-on approach, often not provided by traditional textbooks; and (ii) to run geometric machine learning algorithms seamlessly, without delving into the mathematical details.To address this gap, we present the open-source Python package geomstats and introduce hands-on tutorials for differential geometry and geometric machine learning algorithms -Geometric Learning -that rely on it.Code and documentation: github.com/geomstats/geomstatsand geomstats.ai.},
+  code = {https://github.com/geomstats/geomstats},
+}
+
+@article{JMLR:v21:19-027,
+  author  = {Nina Miolane and Nicolas Guigui and Alice Le Brigant and Johan Mathe and Benjamin Hou and Yann Thanwerdas and Stefan Heyder and Olivier Peltre and Niklas Koep and Hadi Zaatiti and Hatem Hajri and Yann Cabanes and Thomas Gerald and Paul Chauchat and Christian Shewmake and Daniel Brooks and Bernhard Kainz and Claire Donnat and Susan Holmes and Xavier Pennec},
+  title   = {Geomstats:  A Python Package for Riemannian Geometry in Machine Learning},
+  journal = {Journal of Machine Learning Research},
+  year    = {2020},
+  volume  = {21},
+  number  = {223},
+  pages   = {1--9},
+  url     = {http://jmlr.org/papers/v21/19-027.html},
+  doi = {10.48550/arxiv.2004.04667},
+  eprint = {1805.08308},
+  archiveprefix = {arXiv},
+  abstract = {We introduce Geomstats, an open-source Python toolbox for computations and statistics on nonlinear manifolds, such as hyperbolic spaces, spaces of symmetric positive definite matrices, Lie groups of transformations, and many more. We provide object-oriented and extensively unit-tested implementations. Among others, manifolds come equipped with families of Riemannian metrics, with associated exponential and logarithmic maps, geodesics and parallel transport. Statistics and learning algorithms provide methods for estimation, clustering and dimension reduction on manifolds. All associated operations are vectorized for batch computation and provide support for different execution backends, namely NumPy, PyTorch and TensorFlow, enabling GPU acceleration. This paper presents the package, compares it with related libraries and provides relevant code examples. We show that Geomstats provides reliable building blocks to foster research in differential geometry and statistics, and to democratize the use of Riemannian geometry in machine learning applications. The source code is freely available under the MIT license at \\urlgeomstats.ai.},
+  code = {https://github.com/geomstats/geomstats},
+}
+
+@inproceedings{DBLP:conf/miccai/VlontzosBHRK20,
+  author    = {Athanasios Vlontzos and
+               Samuel Budd and
+               Benjamin Hou and
+               Daniel Rueckert and
+               Bernhard Kainz},
+  title     = {3D Probabilistic Segmentation and Volumetry from 2D Projection Images},
+  booktitle = {TIA@MICCAI},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12502},
+  pages     = {48--57},
+  publisher = {Springer},
+  year      = {2020},
+  doi = {10.1007/978-3-030-62469-9\_5},
+  url = {https://doi.org/10.1007/978-3-030-62469-9\_5},
+  eprint = {2006.12809},
+  archiveprefix = {arXiv},
+  abstract = {X-Ray imaging is quick, cheap and useful for front-line care assessment and intra-operative real-time imaging (e.g., C-Arm Fluoroscopy). However, it suffers from projective information loss and lacks vital volumetric information on which many essential diagnostic biomarkers are based on. In this paper we explore probabilistic methods to reconstruct 3D volumetric images from 2D imaging modalities and measure the models' performance and confidence. We show our models' performance on large connected structures and we test for limitations regarding fine structures and image domain sensitivity. We utilize fast end-to-end training of a 2D-3D convolutional networks, evaluate our method on 117 CT scans segmenting 3D structures from digitally reconstructed radiographs (DRRs) with a Dice score of $0.91 \\pm 0.0013$. Source code will be made available by the time of the conference.},
+}
+
+@inproceedings{DBLP:conf/miccai/HouVARK19,
+  author    = {Benjamin Hou and
+               Athanasios Vlontzos and
+               Amir Alansary and
+               Daniel Rueckert and
+               Bernhard Kainz},
+  title     = {Flexible Conditional Image Generation of Missing Data with Learned
+               Mental Maps},
+  booktitle = {MLMIR@MICCAI},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11905},
+  pages     = {139--150},
+  publisher = {Springer},
+  year      = {2019},
+  doi = {10.1007/978-3-030-33843-5\_13},
+  url = {https://doi.org/10.1007/978-3-030-33843-5\_13},
+  eprint = {1908.11312},
+  archiveprefix = {arXiv},
+  abstract = {Real-world settings often do not allow acquisition of high-resolution volumetric images for accurate morphological assessment and diagnostic. In clinical practice it is frequently common to acquire only sparse data (e.g. individual slices) for initial diagnostic decision making. Thereby, physicians rely on their prior knowledge (or mental maps) of the human anatomy to extrapolate the underlying 3D information. Accurate mental maps require years of anatomy training, which in the first instance relies on normative learning, i.e. excluding pathology. In this paper, we leverage Bayesian Deep Learning and environment mapping to generate full volumetric anatomy representations from none to a small, sparse set of slices. We evaluate proof of concept implementations based on Generative Query Networks (GQN) and Conditional BRUNO using abdominal CT and brain MRI as well as in a clinical application involving sparse, motion-corrupted MR acquisition for fetal imaging. Our approach allows to reconstruct 3D volumes from 1 to 4 tomographic slices, with a SSIM of 0.7+ and cross-correlation of 0.8+ compared to the 3D ground truth.},
+}
+
+@inproceedings{DBLP:conf/miccai/QiuQFHSR19,
+  author    = {Huaqi Qiu and
+               Chen Qin and
+               Lo{\"{\i}}c Le Folgoc and
+               Benjamin Hou and
+               Jo Schlemper and
+               Daniel Rueckert},
+  title     = {Deep Learning for Cardiac Motion Estimation: Supervised vs. Unsupervised
+               Training},
+  booktitle = {STACOM@MICCAI},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12009},
+  pages     = {186--194},
+  publisher = {Springer},
+  year      = {2019},
+  doi = {10.1007/978-3-030-39074-7\_20},
+  url = {https://doi.org/10.1007/978-3-030-39074-7\_20},
+  abstract = {Deep learning registration methods can provide competitive accuracy with substantially shorter runtimes than traditional registration. This work directly compares supervised training, in which a model regresses to generated ground-truth deformation, with unsupervised training, in which the model optimizes similarity between registered images. Tests on real cardiac MRI show that supervised training produces more regular deformation, while unsupervised training more accurately captures the deformation of anatomical structures in cardiac motion.},
+}
+
+@article{DBLP:journals/mia/AlansaryOLFHVKV19,
+  author    = {Amir Alansary and
+               Ozan Oktay and
+               Yuanwei Li and
+               Lo{\"{\i}}c Le Folgoc and
+               Benjamin Hou and
+               Ghislain Vaillant and
+               Konstantinos Kamnitsas and
+               Athanasios Vlontzos and
+               Ben Glocker and
+               Bernhard Kainz and
+               Daniel Rueckert},
+  title     = {Evaluating reinforcement learning agents for anatomical landmark detection},
+  journal   = {Medical Image Anal.},
+  volume    = {53},
+  pages     = {156--164},
+  year      = {2019},
+  doi = {10.1016/j.media.2019.02.007},
+  url = {https://doi.org/10.1016/j.media.2019.02.007},
+  code = {https://github.com/amiralansary/rl-medical},
+  abstract = {Automatic anatomical-landmark detection is important for many medical-image-analysis applications, but manual annotation is time-consuming and prone to observer error. This study evaluates deep reinforcement-learning strategies that train agents to localize landmarks in three-dimensional scans. It compares fixed- and multiscale search, hierarchical coarse-to-fine actions and several deep Q-network architectures across fetal ultrasound, adult brain MRI and cardiac MRI. The proposed agents outperform supervised and reinforcement-learning baselines, while hierarchical steps accelerate search by a factor of four to five.},
+}
+
+@article{DBLP:journals/tmi/MengHMRSKSZHRTO19,
+  author    = {Qingjie Meng and
+               James Housden and
+               Jacqueline Matthew and
+               Daniel Rueckert and
+               Julia A. Schnabel and
+               Bernhard Kainz and
+               Matthew Sinclair and
+               Veronika A. Zimmer and
+               Benjamin Hou and
+               Martin Rajchl and
+               Nicolas Toussaint and
+               Ozan Oktay and
+               Jo Schlemper and
+               Alberto G{\'{o}}mez},
+  title     = {Weakly Supervised Estimation of Shadow Confidence Maps in Fetal Ultrasound
+               Imaging},
+  journal   = {{IEEE} Trans. Medical Imaging},
+  volume    = {38},
+  number    = {12},
+  pages     = {2755--2767},
+  year      = {2019},
+  doi = {10.1109/tmi.2019.2913311},
+  url = {https://doi.org/10.1109/tmi.2019.2913311},
+  abstract = {Detecting acoustic shadows in ultrasound images is important in many clinical and engineering applications. Real-time feedback of acoustic shadows can guide sonographers to a standardized diagnostic viewing plane with minimal artifacts and can provide additional information for other automatic image analysis algorithms. However, automatically detecting shadow regions using learning-based algorithms is challenging because pixel-wise ground truth annotation of acoustic shadows is subjective and time consuming. In this paper, we propose a weakly supervised method for automatic confidence estimation of acoustic shadow regions. Our method is able to generate a dense shadow-focused confidence map. In our method, a shadow-seg module is built to learn general shadow features for shadow segmentation, based on global image-level annotations as well as a small number of coarse pixel-wise shadow annotations. A transfer function is introduced to extend the obtained binary shadow segmentation to a reference confidence map. In addition, a confidence estimation network is proposed to learn the mapping between input images and the reference confidence maps. This network is able to predict shadow confidence maps directly from input images during inference. We use evaluation metrics such as DICE, inter-class correlation, and so on, to verify the effectiveness of our method. Our method is more consistent than human annotation and outperforms the state-of-the-art quantitatively in shadow segmentation and qualitatively in confidence estimation of shadow regions. Furthermore, we demonstrate the applicability of our method by integrating shadow confidence maps into tasks such as ultrasound image classification, multi-view image fusion, and automated biometric measurements.},
+}
+
+@inproceedings{alansary2018evaluating,
+  title={Evaluating Reinforcement Learning Agents for Anatomical Landmark Detection},
+  author={Alansary, Amir and Oktay, Ozan and Li, Yuanwei and Le Folgoc, Loic and Hou, Benjamin and Vaillant, Ghislain and Glocker, Ben and Kainz, Bernhard and Rueckert, Daniel},
+  booktitle={ Medical Imaging with Deep Learning},
+  year={2018},
+  organization={Amsterdam},
+  doi = {10.1016/j.media.2019.02.007},
+  url = {https://doi.org/10.1016/j.media.2019.02.007},
+  code = {https://github.com/amiralansary/rl-medical},
+  abstract = {Automatic detection of anatomical landmarks is essential for many medical-image-analysis and acquisition methods, while manual annotation is time-consuming and error-prone. This work evaluates reinforcement-learning strategies that train agents to localize landmarks in medical scans, including fixed- and multiscale search with hierarchical coarse-to-fine actions. Several deep Q-network architectures are tested on a challenging fetal-head-ultrasound dataset.},
+}
+
+@inproceedings{DBLP:conf/miccai/HouMKLAMHRGK18,
+  author    = {Benjamin Hou and
+               Nina Miolane and
+               Bishesh Khanal and
+               Matthew C. H. Lee and
+               Amir Alansary and
+               Steven G. McDonagh and
+               Joseph V. Hajnal and
+               Daniel Rueckert and
+               Ben Glocker and
+               Bernhard Kainz},
+  title     = {Computing {CNN} Loss and Gradients for Pose Estimation with Riemannian
+               Geometry},
+  booktitle = {{MICCAI} {(1)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11070},
+  pages     = {756--764},
+  publisher = {Springer},
+  year      = {2018},
+  doi = {10.1007/978-3-030-00928-1\_85},
+  url = {https://doi.org/10.1007/978-3-030-00928-1\_85},
+  eprint = {1805.01026},
+  archiveprefix = {arXiv},
+  abstract = {Pose estimation, i.e. predicting a 3D rigid transformation with respect to a fixed co-ordinate frame in, SE(3), is an omnipresent problem in medical image analysis with applications such as: image rigid registration, anatomical standard plane detection, tracking and device/camera pose estimation. Deep learning methods often parameterise a pose with a representation that separates rotation and translation. As commonly available frameworks do not provide means to calculate loss on a manifold, regression is usually performed using the L2-norm independently on the rotation's and the translation's parameterisations, which is a metric for linear spaces that does not take into account the Lie group structure of SE(3). In this paper, we propose a general Riemannian formulation of the pose estimation problem. We propose to train the CNN directly on SE(3) equipped with a left-invariant Riemannian metric, coupling the prediction of the translation and rotation defining the pose. At each training step, the ground truth and predicted pose are elements of the manifold, where the loss is calculated as the Riemannian geodesic distance. We then compute the optimisation direction by back-propagating the gradient with respect to the predicted pose on the tangent space of the manifold SE(3) and update the network weights. We thoroughly evaluate the effectiveness of our loss function by comparing its performance with popular and most commonly used existing methods, on tasks such as image-based localisation and intensity-based 2D/3D registration. We also show that hyper-parameters, used in our loss function to weight the contribution between rotations and translations, can be intrinsically calculated from the dataset to achieve greater performance margins.},
+}
+
+@inproceedings{DBLP:conf/miccai/LiKHACSMGKKR18,
+  author    = {Yuanwei Li and
+               Bishesh Khanal and
+               Benjamin Hou and
+               Amir Alansary and
+               Juan J. Cerrolaza and
+               Matthew Sinclair and
+               Jacqueline Matthew and
+               Chandni Gupta and
+               Caroline L. Knight and
+               Bernhard Kainz and
+               Daniel Rueckert},
+  title     = {Standard Plane Detection in 3D Fetal Ultrasound Using an Iterative
+               Transformation Network},
+  booktitle = {{MICCAI} {(1)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11070},
+  pages     = {392--400},
+  publisher = {Springer},
+  year      = {2018},
+  doi = {10.1007/978-3-030-00928-1\_45},
+  url = {https://doi.org/10.1007/978-3-030-00928-1\_45},
+  eprint = {1806.07486},
+  archiveprefix = {arXiv},
+  abstract = {Standard scan plane detection in fetal brain ultrasound (US) forms a crucial step in the assessment of fetal development. In clinical settings, this is done by manually manoeuvring a 2D probe to the desired scan plane. With the advent of 3D US, the entire fetal brain volume containing these standard planes can be easily acquired. However, manual standard plane identification in 3D volume is labour-intensive and requires expert knowledge of fetal anatomy. We propose a new Iterative Transformation Network (ITN) for the automatic detection of standard planes in 3D volumes. ITN uses a convolutional neural network to learn the relationship between a 2D plane image and the transformation parameters required to move that plane towards the location/orientation of the standard plane in the 3D volume. During inference, the current plane image is passed iteratively to the network until it converges to the standard plane location. We explore the effect of using different transformation representations as regression outputs of ITN. Under a multi-task learning framework, we introduce additional classification probability outputs to the network to act as confidence measures for the regressed transformation parameters in order to further improve the localisation accuracy. When evaluated on 72 US volumes of fetal brain, our method achieves an error of 3.83mm/12.7 degrees and 3.80mm/12.6 degrees for the transventricular and transcerebellar planes respectively and takes 0.46s per plane. Source code is publicly available at https://github.com/yuanwei1989/plane-detection.},
+  code = {https://github.com/yuanwei1989/plane-detection},
+}
+
+@article{DBLP:journals/tmi/HouKAMDRHRGK18,
+  author    = {Benjamin Hou and
+               Bishesh Khanal and
+               Amir Alansary and
+               Steven G. McDonagh and
+               Alice Davidson and
+               Mary A. Rutherford and
+               Joseph V. Hajnal and
+               Daniel Rueckert and
+               Ben Glocker and
+               Bernhard Kainz},
+  title     = {3-D Reconstruction in Canonical Co-Ordinate Space From Arbitrarily
+               Oriented 2-D Images},
+  journal   = {{IEEE} Trans. Medical Imaging},
+  volume    = {37},
+  number    = {8},
+  pages     = {1737--1750},
+  year      = {2018},
+  doi = {10.1109/tmi.2018.2798801},
+  url = {https://doi.org/10.1109/tmi.2018.2798801},
+  abstract = {Limited capture range, and the requirement to provide high quality initialization for optimization-based 2-D/3-D image registration methods, can significantly degrade the performance of 3-D image reconstruction and motion compensation pipelines. Challenging clinical imaging scenarios, which contain significant subject motion, such as fetal in-utero imaging, complicate the 3-D image and volume reconstruction process. In this paper, we present a learning-based image registration method capable of predicting 3-D rigid transformations of arbitrarily oriented 2-D image slices, with respect to a learned canonical atlas co-ordinate system. Only image slice intensity information is used to perform registration and canonical alignment, no spatial transform initialization is required. To find image transformations, we utilize a convolutional neural network architecture to learn the regression function capable of mapping 2-D image slices to a 3-D canonical atlas space. We extensively evaluate the effectiveness of our approach quantitatively on simulated magnetic resonance imaging (MRI), fetal brain imagery with synthetic motion and further demonstrate qualitative results on real fetal MRI data where our method is integrated into a full reconstruction and motion compensation pipeline. Our learning based registration achieves an average spatial prediction error of 7 mm on simulated data and produces qualitatively improved reconstructions for heavily moving fetuses with gestational ages of approximately 20 weeks. Our model provides a general and computationally efficient solution to the 2-D/3-D registration initialization problem and is suitable for real-time scenarios.},
+}
+
+@inproceedings{DBLP:conf/miccai/AlansaryFVOLBPG18,
+  author    = {Amir Alansary and
+               Lo{\"{\i}}c Le Folgoc and
+               Ghislain Vaillant and
+               Ozan Oktay and
+               Yuanwei Li and
+               Wenjia Bai and
+               Jonathan Passerat{-}Palmbach and
+               Ricardo Guerrero and
+               Konstantinos Kamnitsas and
+               Benjamin Hou and
+               Steven G. McDonagh and
+               Ben Glocker and
+               Bernhard Kainz and
+               Daniel Rueckert},
+  title     = {Automatic View Planning with Multi-scale Deep Reinforcement Learning
+               Agents},
+  booktitle = {{MICCAI} {(1)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11070},
+  pages     = {277--285},
+  publisher = {Springer},
+  year      = {2018},
+  doi = {10.1007/978-3-030-00928-1\_32},
+  url = {https://doi.org/10.1007/978-3-030-00928-1\_32},
+  eprint = {1806.03228},
+  archiveprefix = {arXiv},
+  abstract = {We propose a fully automatic method to find standardized view planes in 3D image acquisitions. Standard view images are important in clinical practice as they provide a means to perform biometric measurements from similar anatomical regions. These views are often constrained to the native orientation of a 3D image acquisition. Navigating through target anatomy to find the required view plane is tedious and operator-dependent. For this task, we employ a multi-scale reinforcement learning (RL) agent framework and extensively evaluate several Deep Q-Network (DQN) based strategies. RL enables a natural learning paradigm by interaction with the environment, which can be used to mimic experienced operators. We evaluate our results using the distance between the anatomical landmarks and detected planes, and the angles between their normal vector and target. The proposed algorithm is assessed on the mid-sagittal and anterior-posterior commissure planes of brain MRI, and the 4-chamber long-axis plane commonly used in cardiac MRI, achieving accuracy of 1.53mm, 1.98mm and 4.84mm, respectively.},
+}
+
+
+@inproceedings{DBLP:conf/miccai/MengBSHRGHTZTMR18,
+  author    = {Qingjie Meng and
+               Christian F. Baumgartner and
+               Matthew Sinclair and
+               James Housden and
+               Martin Rajchl and
+               Alberto G{\'{o}}mez and
+               Benjamin Hou and
+               Nicolas Toussaint and
+               Veronika A. M. Zimmer and
+               Jeremy Tan and
+               Jacqueline Matthew and
+               Daniel Rueckert and
+               Julia A. Schnabel and
+               Bernhard Kainz},
+  title     = {Automatic Shadow Detection in 2D Ultrasound Images},
+  booktitle = {DATRA/PIPPI@MICCAI},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11076},
+  pages     = {66--75},
+  publisher = {Springer},
+  year      = {2018},
+  doi = {10.1007/978-3-030-00807-9\_7},
+  url = {https://doi.org/10.1007/978-3-030-00807-9\_7},
+  abstract = {Automatically detecting acoustic shadows is important for ultrasound analysis tasks ranging from segmentation to landmark detection. This work generates a pixel-wise, shadow-focused confidence map from weakly labelled, anatomically focused images by initializing potential shadow regions with a classification task, extending them with a generative adversarial model and incorporating intensity information through a distance matrix. The method highlights shadow regions in fetal-screening ultrasound and improves on prior methods and downstream biometric measurements.},
+}
+
+
+@inproceedings{DBLP:conf/miccai/KhanalGTMZSMGWG18,
+  author    = {Bishesh Khanal and
+               Alberto G{\'{o}}mez and
+               Nicolas Toussaint and
+               Steven G. McDonagh and
+               Veronika A. M. Zimmer and
+               Emily Skelton and
+               Jacqueline Matthew and
+               Daniel Grzech and
+               Robert Wright and
+               Chandni Gupta and
+               Benjamin Hou and
+               Daniel Rueckert and
+               Julia A. Schnabel and
+               Bernhard Kainz},
+  title     = {EchoFusion: Tracking and Reconstruction of Objects in 4D Freehand
+               Ultrasound Imaging Without External Trackers},
+  booktitle = {DATRA/PIPPI@MICCAI},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {11076},
+  pages     = {117--127},
+  publisher = {Springer},
+  year      = {2018},
+  doi = {10.1007/978-3-030-00807-9\_12},
+  url = {https://doi.org/10.1007/978-3-030-00807-9\_12},
+  eprint = {1807.10583},
+  archiveprefix = {arXiv},
+  abstract = {Ultrasound (US) is the most widely used fetal imaging technique. However, US images have limited capture range, and suffer from view dependent artefacts such as acoustic shadows. Compounding of overlapping 3D US acquisitions into a high-resolution volume can extend the field of view and remove image artefacts, which is useful for retrospective analysis including population based studies. However, such volume reconstructions require information about relative transformations between probe positions from which the individual volumes were acquired. In prenatal US scans, the fetus can move independently from the mother, making external trackers such as electromagnetic or optical tracking unable to track the motion between probe position and the moving fetus. We provide a novel methodology for image-based tracking and volume reconstruction by combining recent advances in deep learning and simultaneous localisation and mapping (SLAM). Tracking semantics are established through the use of a Residual 3D U-Net and the output is fed to the SLAM algorithm. As a proof of concept, experiments are conducted on US volumes taken from a whole body fetal phantom, and from the heads of real fetuses. For the fetal head segmentation, we also introduce a novel weak annotation approach to minimise the required manual effort for ground truth annotation. We evaluate our method qualitatively, and quantitatively with respect to tissue discrimination accuracy and tracking robustness.},
+}
+
+@inproceedings{DBLP:conf/miccai/HouAMDRHRGK17,
+  author    = {Benjamin Hou and
+               Amir Alansary and
+               Steven G. McDonagh and
+               Alice Davidson and
+               Mary A. Rutherford and
+               Joseph V. Hajnal and
+               Daniel Rueckert and
+               Ben Glocker and
+               Bernhard Kainz},
+  title     = {Predicting Slice-to-Volume Transformation in Presence of Arbitrary
+               Subject Motion},
+  booktitle = {{MICCAI} {(2)}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {10434},
+  pages     = {296--304},
+  publisher = {Springer},
+  year      = {2017},
+  doi = {10.1007/978-3-319-66185-8\_34},
+  url = {https://doi.org/10.1007/978-3-319-66185-8\_34},
+  eprint = {1702.08891},
+  archiveprefix = {arXiv},
+  abstract = {This paper aims to solve a fundamental problem in intensity-based 2D/3D registration, which concerns the limited capture range and need for very good initialization of state-of-the-art image registration methods. We propose a regression approach that learns to predict rotation and translations of arbitrary 2D image slices from 3D volumes, with respect to a learned canonical atlas co-ordinate system. To this end, we utilize Convolutional Neural Networks (CNNs) to learn the highly complex regression function that maps 2D image slices into their correct position and orientation in 3D space. Our approach is attractive in challenging imaging scenarios, where significant subject motion complicates reconstruction performance of 3D volumes from 2D slice data. We extensively evaluate the effectiveness of our approach quantitatively on simulated MRI brain data with extreme random motion. We further demonstrate qualitative results on fetal MRI where our method is integrated into a full reconstruction and motion compensation pipeline. With our CNN regression approach we obtain an average prediction error of 7mm on simulated data, and convincing reconstruction quality of images of very young fetuses where previous methods fail. We further discuss applications to Computed Tomography and X-ray projections. Our approach is a general solution to the 2D/3D initialization problem. It is computationally efficient, with prediction times per slice of a few milliseconds, making it suitable for real-time scenarios.},
+}
+
+@inproceedings{DBLP:conf/miccai/McDonaghHAOKRHK17,
+  author    = {Steven G. McDonagh and
+               Benjamin Hou and
+               Amir Alansary and
+               Ozan Oktay and
+               Konstantinos Kamnitsas and
+               Mary A. Rutherford and
+               Joseph V. Hajnal and
+               Bernhard Kainz},
+  title     = {Context-Sensitive Super-Resolution for Fast Fetal Magnetic Resonance
+               Imaging},
+  booktitle = {CMMI/RAMBO/SWITCH@MICCAI},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {10555},
+  pages     = {116--126},
+  publisher = {Springer},
+  year      = {2017},
+  doi = {10.1007/978-3-319-67564-0\_12},
+  url = {https://doi.org/10.1007/978-3-319-67564-0\_12},
+  eprint = {1703.00035},
+  archiveprefix = {arXiv},
+  abstract = {3D Magnetic Resonance Imaging (MRI) is often a trade-off between fast but low-resolution image acquisition and highly detailed but slow image acquisition. Fast imaging is required for targets that move to avoid motion artefacts. This is in particular difficult for fetal MRI. Spatially independent upsampling techniques, which are the state-of-the-art to address this problem, are error prone and disregard contextual information. In this paper we propose a context-sensitive upsampling method based on a residual convolutional neural network model that learns organ specific appearance and adopts semantically to input data allowing for the generation of high resolution images with sharp edges and fine scale detail. By making contextual decisions about appearance and shape, present in different parts of an image, we gain a maximum of structural detail at a similar contrast as provided by high-resolution data. We experiment on $145$ fetal scans and show that our approach yields an increased PSNR of $1.25$ $dB$ when applied to under-sampled fetal data \\emphcf. baseline upsampling. Furthermore, our method yields an increased PSNR of $1.73$ $dB$ when utilizing under-sampled fetal data to perform brain volume reconstruction on motion corrupted captured data.},
+}
+
+@inproceedings{DBLP:conf/embc/MirzaZHNPT17,
+  author    = {Khalid B. Mirza and
+               Claudio Zuliani and
+               Benjamin Hou and
+               Fu Siong Ng and
+               Nicholas S. Peters and
+               Christofer Toumazou},
+  title     = {Injection moulded microneedle sensor for real-time wireless pH monitoring},
+  booktitle = {{EMBC}},
+  pages     = {189--192},
+  publisher = {{IEEE}},
+  year      = {2017},
+  doi = {10.1109/embc.2017.8036794},
+  url = {https://doi.org/10.1109/embc.2017.8036794},
+  abstract = {This paper describes the development of an array of individually addressable pH sensitive microneedles using injection moulding and their integration within a portable device for real-time wireless recording of pH distributions in biological samples. The fabricated microneedles are subjected to gold patterning followed by electrodeposition of iridium oxide to sensitize them to 0.07 units of pH change. Miniaturised electronics suitable for the sensors readout, analog-to-digital conversion and wireless transmission of the potentiometric data are embodied within the device, enabling it to measure real-time pH of soft biological samples such as muscles. In this paper, real-time recording of the cardiac pH distribution, during ischemia followed by reperfusion cycles in cardiac muscles of male Wistar rats has been demonstrated by using the microneedle array.},
+}

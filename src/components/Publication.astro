@@ -4,19 +4,20 @@ import { profile } from '../config';
 import { url } from '../lib/urls';
 interface Props { publication: CollectionEntry<'publications'>; showYear?: boolean; }
 const { publication: { data }, showYear = true } = Astro.props;
+const allAuthors = data.authors;
 ---
 <article class:list={['publication', { 'publication-no-year': !showYear }]}>
   {showYear && <span class="publication-year">{data.year}</span>}
   <div class="publication-content">
     <h3>{data.title}</h3>
-    <p class="authors">{data.authors.map((author, index) => <><span class:list={{ 'self-author': author === profile.name }}>{author}</span>{index < data.authors.length - 1 ? ', ' : ''}</>)}</p>
-    <p class="venue">{data.venue}{!showYear && ` · ${data.year}`}</p>
+    <p class="authors">{allAuthors.map((author, index) => <><span class:list={{ 'self-author': author === profile.name }}>{author}</span>{index < allAuthors.length - 1 ? ', ' : ''}</>)}</p>
+    <p class="venue">{data.venue}</p>
     <div class="publication-actions">
       {data.links.map(link => <a href={url(link.href)} aria-label={`${link.label}: ${data.title}`}>{link.label}</a>)}
-      {data.summary && (
-        <details class="publication-summary">
-          <summary>Summary</summary>
-          <p>{data.summary}</p>
+      {data.abstract && (
+        <details class="publication-abstract">
+          <summary>Abstract</summary>
+          <p>{data.abstract}</p>
         </details>
       )}
     </div>

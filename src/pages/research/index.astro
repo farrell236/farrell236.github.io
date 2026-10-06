@@ -1,16 +1,32 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHeading from '../../components/PageHeading.astro';
-import ResearchCard from '../../components/ResearchCard.astro';
+import ResearchPaperCard from '../../components/ResearchPaperCard.astro';
 import { sectionPages } from '../../data/pages';
-import { getResearchProjects } from '../../lib/collections';
+import { getResearchPaperGroups } from '../../lib/collections';
 
-const projects = await getResearchProjects();
+const groups = await getResearchPaperGroups();
 const page = sectionPages.research;
 ---
 <Layout title={page.title} description={page.metaDescription}>
   <PageHeading title={page.title} description={page.description} />
-  <div class="research-list">
-    {projects.map(project => <ResearchCard project={project} featured headingLevel={2} />)}
+  <div class="research-themes">
+    {groups.map(({ theme, papers }) => (
+      <section class="research-theme" aria-labelledby={`research-theme-${theme.id}`}>
+        <header class="research-theme-heading">
+          <h2 id={`research-theme-${theme.id}`}>{theme.title}</h2>
+        </header>
+        <div class="research-list">
+          {papers.map(({ publication, entry }) => (
+            <ResearchPaperCard
+              publication={publication}
+              summary={entry.summary}
+              image={entry.image}
+              headingLevel={3}
+            />
+          ))}
+        </div>
+      </section>
+    ))}
   </div>
 </Layout>

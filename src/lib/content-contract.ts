@@ -26,11 +26,15 @@ export const researchSchema = z.object({
   description: requiredText,
   field: requiredText,
   year: z.number().int().min(1900).max(2100),
+  // Optional additive fields preserve compatibility with content format v1.
+  period: requiredText.optional(),
   order: z.number().int().nonnegative(),
   selected: z.boolean().default(false),
   // A theme hint, not a content requirement. Unknown values use neutral artwork.
   illustration: requiredText.default('default'),
   links: z.array(link).default([]),
+  leadPublications: z.array(requiredText).default([]),
+  relatedPublications: z.array(requiredText).default([]),
 });
 
 export const publicationSchema = z.object({
@@ -42,7 +46,7 @@ export const publicationSchema = z.object({
   year: z.number().int().min(1900).max(2100),
   order: z.number().int().nonnegative(),
   selected: z.boolean().default(false),
-  summary: requiredText.optional(),
+  abstract: requiredText.optional(),
   links: z.array(link).default([]),
 });
 

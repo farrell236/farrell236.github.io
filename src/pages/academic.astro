@@ -3,34 +3,96 @@ import Layout from '../layouts/Layout.astro';
 import PageHeading from '../components/PageHeading.astro';
 import Icon from '../components/Icon.astro';
 import { academicPage } from '../data/pages';
-import { url } from '../lib/urls';
 ---
 <Layout title="Academic" description={academicPage.metaDescription}>
   <PageHeading title={academicPage.title} description={academicPage.description} />
-  <section class="panel" aria-labelledby="talks">
-    <h2 id="talks">Talks</h2>
-    {academicPage.talks.map(talk => (
-      <article class="academic-row">
-        <h3>{talk.title}</h3>
-        <p>{talk.context}</p>
-        <a
-          class="text-link"
-          href={url(talk.href)}
-          aria-label={`View sample slides: ${talk.title}`}
-        >
-          View sample slides<Icon name="arrow-up-right" />
-        </a>
-      </article>
-    ))}
+
+  <section class="section" aria-labelledby="service-title">
+    <div class="section-heading">
+      <h2 id="service-title">Professional service</h2>
+    </div>
+    <div class="summary-list academic-list">
+      {academicPage.service.map(activity => (
+        <article class="summary-row">
+          <p class="summary-label">{activity.period}</p>
+          <div class="summary-content">
+            <h3>{activity.title}</h3>
+            <p>{activity.organisation}</p>
+            <p>{activity.description}</p>
+            {'href' in activity && (
+              <a class="text-link" href={activity.href}>
+                {activity.linkLabel}<Icon name="arrow-up-right" />
+              </a>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
   </section>
-  <section class="panel" aria-labelledby="teaching">
-    <h2 id="teaching">Teaching</h2>
-    {academicPage.teaching.map(item => (
-      <div class="academic-row">
-        <h3>{item.title}</h3>
-        {item.details.map(detail => <p>{detail}</p>)}
-      </div>
-    ))}
+
+  <section class="section" aria-labelledby="talks-title">
+    <div class="section-heading">
+      <h2 id="talks-title">Invited talks</h2>
+    </div>
+    <div class="summary-list academic-list">
+      {academicPage.talks.map(talk => (
+        <article class="summary-row">
+          <p class="summary-label">{talk.year}</p>
+          <div class="summary-content">
+            <h3>{talk.title}</h3>
+            <p>{talk.context}</p>
+          </div>
+        </article>
+      ))}
+    </div>
   </section>
-  <p class="archive-notice">{academicPage.notice}</p>
+
+  <section class="section" aria-labelledby="teaching-title">
+    <div class="section-heading">
+      <h2 id="teaching-title">Mentoring and teaching</h2>
+    </div>
+    <div class="summary-list academic-list">
+      {academicPage.teaching.map(item => (
+        <article class="summary-row">
+          <p class="summary-label">{item.label}</p>
+          <div class="summary-content">
+            <h3>{item.title}</h3>
+            {'description' in item && <p>{item.description}</p>}
+            {'projects' in item && (
+              <details class="academic-details">
+                <summary>Student projects</summary>
+                <ul class="academic-project-list">
+                  {item.projects?.map(project => (
+                    <li>
+                      <strong>{project.student}</strong> — {
+                        'href' in project
+                          ? <a href={project.href}>{project.title}<Icon name="arrow-up-right" /></a>
+                          : project.title
+                      }
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            )}
+            {'supervision' in item && item.supervision?.map(group => (
+              <details class="academic-details">
+                <summary>As {group.role}</summary>
+                <ul>
+                  {group.students.map(student => <li>{student}</li>)}
+                </ul>
+              </details>
+            ))}
+            {'courses' in item && (
+              <details class="academic-details">
+                <summary>GTA courses</summary>
+                <ul>
+                  {item.courses?.map(course => <li>{course}</li>)}
+                </ul>
+              </details>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
 </Layout>
