@@ -329,12 +329,19 @@ test('Musings replaces Writing in user-facing navigation and headings', async ()
 test('project musings can link directly to their hosted sites', async () => {
   const index = await readFile(resolve(output, 'index.html'), 'utf8');
   const archive = await readFile(resolve(output, 'writing/index.html'), 'utf8');
-  for (const href of [
+  const homepageProjects = [
     'https://farrell236.github.io/interactive-rad/',
     'https://farrell236.github.io/rufuspp/',
-  ]) {
-    assert.ok(index.includes(`href="${href}"`), `Homepage missing direct link: ${href}`);
+  ];
+  const hostedProjects = [
+    ...homepageProjects,
+    'https://farrell236.github.io/python-drr/',
+  ];
+  for (const href of hostedProjects) {
     assert.ok(archive.includes(`href="${href}"`), `Musings missing direct link: ${href}`);
+  }
+  for (const href of homepageProjects) {
+    assert.ok(index.includes(`href="${href}"`), `Homepage missing direct link: ${href}`);
   }
 });
 
