@@ -514,11 +514,12 @@ test('mobile navigation expands as a full-width hairline-separated list', () => 
   assert.match(css, /\.mobile-menu nav a\[aria-current\] \{[^}]*background:\s*transparent;/);
 });
 
-test('the responsive profile presents centered links and dot-separated disciplines', () => {
+test('the responsive profile centers links and actions with dot-separated disciplines', () => {
   assert.match(css, /\.discipline-separator\s*\{[^}]*display:\s*none;/);
   assert.match(css, /@media \(max-width:\s*56rem\)[\s\S]*?\.discipline br\s*\{[^}]*display:\s*none;/);
   assert.match(css, /@media \(max-width:\s*56rem\)[\s\S]*?\.discipline-separator\s*\{[^}]*display:\s*inline;/);
   assert.match(css, /@media \(max-width:\s*56rem\)[\s\S]*?\.profile-links\s*\{[^}]*justify-content:\s*center;/);
+  assert.match(css, /@media \(max-width:\s*56rem\)[\s\S]*?\.profile-actions\s*\{[^}]*justify-content:\s*center;/);
 });
 
 const roles = ['canvas', 'surface', 'quiet', 'text', 'secondary', 'accent'];
