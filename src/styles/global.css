@@ -266,7 +266,7 @@ main { min-width: 0; }
   .discipline br { display: none; }
   .discipline-separator { display: inline; }
   .profile-intro { display: none; }
-  .profile-links { display: flex; flex-wrap: wrap; gap: 0 1.25rem; margin-top: .875rem; }
+  .profile-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 1.25rem; margin-top: .875rem; }
   .profile-links a { gap: .375rem; }
   .profile-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.25rem; margin-top: .5rem; padding-top: 0; border-top: none; }
   .intro { padding-top: 0; padding-bottom: 2rem; }
