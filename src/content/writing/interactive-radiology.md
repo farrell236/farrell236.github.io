@@ -3,6 +3,7 @@ title: "Interactive Radiology: learning imaging by changing it"
 description: "Why an imaging lesson should respond to the learner: a browser-based laboratory for radiography, image data and CT windowing."
 published: 2026-10-05
 category: Project notes
+externalUrl: https://farrell236.github.io/interactive-rad/
 archived: false
 ---
 

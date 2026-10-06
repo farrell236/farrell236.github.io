@@ -55,6 +55,8 @@ export const writingSchema = z.object({
   description: requiredText,
   published: z.coerce.date(),
   category: requiredText,
+  // When present, listing cards bypass the local article and open this URL.
+  externalUrl: requiredText.optional(),
   draft: z.boolean().default(false),
   archived: z.boolean().default(false),
 });

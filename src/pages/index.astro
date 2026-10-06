@@ -78,7 +78,7 @@ const writing = await getWriting(homePage.writingLimit);
     <ul class="writing-list">
       {writing.map(post => (
         <li>
-          <a class="writing-link" href={url(`/writing/${post.id}/`)}>
+          <a class="writing-link" href={url(post.data.externalUrl ?? `/writing/${post.id}/`)}>
             <span class="writing-title">
               {post.data.title}
               <small>{post.data.category}</small>

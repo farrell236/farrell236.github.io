@@ -3,6 +3,7 @@ title: "Rufus++: rebuilding a familiar utility across platforms"
 description: "Notes on separating a portable boot-media core from native device access—and treating destructive operations as a safety problem."
 published: 2026-09-28
 category: Project notes
+externalUrl: https://farrell236.github.io/rufuspp/
 archived: false
 ---
 

@@ -386,6 +386,8 @@ title: My article title
 description: One sentence used in listings and metadata.
 published: 2026-10-05
 category: Research notes
+# Optional: bypass the local article from listings.
+# externalUrl: https://example.org/project
 draft: true
 archived: false
 ---
@@ -400,6 +402,10 @@ The filename determines the URL:
 ```text
 /writing/my-new-article/
 ```
+
+To make the homepage and Musings listing open an external project directly,
+add `externalUrl` to the frontmatter. The local Markdown page remains available
+at its normal URL, but listing links will bypass it.
 
 ## 11. Adjust colours or styling
 

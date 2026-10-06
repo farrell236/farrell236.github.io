@@ -326,6 +326,18 @@ test('Musings replaces Writing in user-facing navigation and headings', async ()
   assert.doesNotMatch(`${index}${archive}${article}`, />Writing<\/a>|<h1>Writing<\/h1>|>All writing<\/a>/);
 });
 
+test('project musings can link directly to their hosted sites', async () => {
+  const index = await readFile(resolve(output, 'index.html'), 'utf8');
+  const archive = await readFile(resolve(output, 'writing/index.html'), 'utf8');
+  for (const href of [
+    'https://farrell236.github.io/interactive-rad/',
+    'https://farrell236.github.io/rufuspp/',
+  ]) {
+    assert.ok(index.includes(`href="${href}"`), `Homepage missing direct link: ${href}`);
+    assert.ok(archive.includes(`href="${href}"`), `Musings missing direct link: ${href}`);
+  }
+});
+
 test('research is a compact index of first-authored papers with disabled project links', async () => {
   const archive = await readFile(resolve(output, 'research/index.html'), 'utf8');
   for (const paper of [
